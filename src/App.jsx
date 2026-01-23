@@ -1,29 +1,23 @@
+import { getStoryblokApi, StoryblokComponent } from "@storyblok/react";
 import { useEffect, useState } from "react";
-import {
-  getStoryblokApi,
-  StoryblokComponent,
-  useStoryblokState,
-} from "@storyblok/react";
 
 function App() {
   const [story, setStory] = useState(null);
+  const storyblokApi = getStoryblokApi();
 
   useEffect(() => {
-    const loadStory = async () => {
-      const api = getStoryblokApi();
-      const { data } = await api.get("cdn/stories/home");
-      setStory(data.story);
-    };
-    loadStory();
+    storyblokApi
+      .get("cdn/stories/home", {
+        version: "published",
+      })
+      .then(({ data }) => {
+        setStory(data.story);
+      });
   }, []);
 
-  useStoryblokState(story);
+  if (!story) return <div>Loading...</div>;
 
-  return (
-    <div>
-      {story ? <StoryblokComponent blok={story.content} /> : "Loading..."}
-    </div>
-  );
+  return <StoryblokComponent blok={story.content} />;
 }
 
 export default App;
