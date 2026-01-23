@@ -1,0 +1,13 @@
+import { storyblokInit, apiPlugin } from "@storyblok/react";
+import Hero from "./Hero";
+import Page from "./page";
+console.log("Storyblok token:", import.meta.env.VITE_STORYBLOK_TOKEN);
+
+storyblokInit({
+  accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
+  use: [apiPlugin],
+  components:{
+    hero: Hero,
+    page: Page,   
+  },
+});
