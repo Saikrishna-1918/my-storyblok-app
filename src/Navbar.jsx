@@ -26,9 +26,9 @@ const NavBar = ({ blok }) => {
                     blok.tabs?.map((tab) => (
                         <div className='tabs'>
 
-                            <a href={tab.label}>{tab.label}</a>
-                            <a href={tab.route}>{tab.route}</a>
-                            <a href={tab.visible}>{tab.visible} </a>
+                            <a href="my-classes">{tab.label}</a>
+                            <a href="my-calendar">{tab.route}</a>
+                            <a href="class-search">{tab.visible} </a>
                         </div>
                     ))
                 }
