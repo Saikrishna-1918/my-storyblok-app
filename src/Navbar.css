@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;600;700&display=swap");
+
+.top-nav-bar-main-div {
+  align-items: center;
+  background-color: #651c32;
+  height: 30px;
+  display: flex;
+  width: 100%;
+  font-family:
+    Stanford,
+    "Source Serif 4",
+    "Source Serif Pro",
+    Georgia,
+    Times,
+    Times New Roman,
+    serif;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-decoration: none;
+  line-height: 0.75;
+  transform: translateZ(0);
+  letter-spacing: 0;
+  font-feature-settings: "liga";
+  font-variant-ligatures: discretionary-ligatures;
+  white-space: nowrap;
+  color: #ffffff;
+  font-size: 20px;
+}
+.nav-bar-navigate-text {
+  margin: 0 0 0 4.6875vw;
+}
+.stanford-logo-text-tag {
+  margin: 0 0 0 4.6875vw;
+}
+.top-nav-bar-main-div a {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.top-nav-bar-second-row {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  justify-content: space-between;
+  width: 100%;
+  /* justify-content: space-between; */
+  /* padding: 0px 15px 5px 0px; */
+  min-height: 50px;
+}
+.nav-bar-navigate-second-text {
+  font-family:
+    "Source Sans 3",
+    "Source Sans Pro",
+    Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  border-left: 0;
+  color: #212529;
+  font-size: 32px;
+  font-weight: 400;
+  padding-left: 0;
+}
+.stanford-logo-text-tag {
+  font-feature-settings: "liga";
+  color: #8c1515;
+  display: inline-block;
+  font-family:
+    Stanford,
+    "Source Serif 4",
+    "Source Serif Pro",
+    Georgia,
+    Times,
+    Times New Roman,
+    serif;
+  font-size: 36px;
+  font-style: normal;
+  font-variant: normal;
+  font-variant-ligatures: discretionary-ligatures;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 0.75;
+  line-height: 17px;
+  text-decoration: none;
+  text-transform: none;
+  transform: translateZ(0);
+  vertical-align: bottom;
+  padding-right: 0;
+}
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 25px;
+  color: var(--primaryBlue) !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: Source Sans Pro;
+  padding: 25px;
+}
+.tabs a {
+  text-decoration: none !important;
+  color: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  display: inline-block;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.top-nav-bar-first-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.top-nav-bar-first-row > div:nth-child(2) {
+  border-right: 1px solid #212529;
+  height: 33px;
+}

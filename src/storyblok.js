@@ -1,7 +1,7 @@
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import Hero from "./Hero";
 import Page from "./Page";
-console.log("Storyblok token:", import.meta.env.VITE_STORYBLOK_TOKEN);
+import NavBar from "./Navbar";
 
 storyblokInit({
   accessToken: import.meta.env.VITE_STORYBLOK_TOKEN,
@@ -9,5 +9,6 @@ storyblokInit({
   components:{
     hero: Hero,
     page: Page,   
+    navbar: NavBar,
   },
 });
