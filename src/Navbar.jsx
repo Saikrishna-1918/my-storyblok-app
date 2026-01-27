@@ -1,5 +1,5 @@
 import { Col } from 'antd';
-import './NavBar.css';
+import './Navbar.css';
 
 const NavBar = ({ blok }) => {
 
