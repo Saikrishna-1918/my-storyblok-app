@@ -15,7 +15,7 @@ const NavBar = ({ blok }) => {
                     <span className="stanford-logo-text-tag">
                         {blok.logo}
                     </span>
-                    <div></div>
+                    <div className='top-nav-bar-first-row-line'></div>
                     <span className="nav-bar-navigate-second-text" >
                         {blok.app_title}
                     </span>

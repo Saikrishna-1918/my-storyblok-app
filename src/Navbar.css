@@ -117,7 +117,7 @@ body {
   align-items: center;
   gap: 10px;
 }
-.top-nav-bar-first-row > div:nth-child(2) {
+.top-nav-bar-first-row-line {
   border-right: 1px solid #212529;
   height: 33px;
 }
