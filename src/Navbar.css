@@ -48,6 +48,7 @@
   /* justify-content: space-between; */
   /* padding: 0px 15px 5px 0px; */
   min-height: 50px;
+  margin-bottom: 10px;
 }
 .nav-bar-navigate-second-text {
   font-family:
@@ -92,25 +93,25 @@
 .tabs {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
   font-size: 25px;
   color: var(--primaryBlue) !important;
   font-size: 20px !important;
   font-weight: 400 !important;
-  font-family: Source Sans Pro;
+  /* font-family: Source Sans Pro; */
+  font-family: "Source Sans 3", sans-serif !important;
   padding: 25px;
 }
-.tabs a {
-  text-decoration: none !important;
-  color: inherit !important;
-  font-size: inherit !important;
-  font-weight: inherit !important;
-  display: inline-block;
+.stanford_banner {
+  width: 100%;
+  display: -webkit-flex;
 }
 html,
 body {
   margin: 0;
   padding: 0;
+  /* overflow: auto; */
 }
 .top-nav-bar-first-row {
   display: flex;
@@ -120,4 +121,9 @@ body {
 .top-nav-bar-first-row-line {
   border-right: 1px solid #212529;
   height: 33px;
+}
+main {
+  height: auto;
+  /* width: 100vw; */
+  background-color: #f5f5f5;
 }
