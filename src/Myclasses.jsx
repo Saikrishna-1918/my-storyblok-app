@@ -1,4 +1,4 @@
-import './Myclasses.css';
+import './myclasses.css';
 
 function Myclasses() {
     return (
