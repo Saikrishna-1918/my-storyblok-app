@@ -83,7 +83,7 @@ const Footer = ({ blok }) => {
             </div>
 
             <div className="secondFooter">
-                <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
+                <div className="secondFooterFirstCol">
                     {
                         blok.secondfooterFirstcol?.map((item) => (
                             <span className='secondFooterFirstText'>
@@ -94,14 +94,57 @@ const Footer = ({ blok }) => {
                     }
                     {
                         blok.secondfooterFirstcol?.map((item) => (
-                            <span style={{ fontSize: '1.42rem', color: 'white' }}>
+                            <span style={{ color: 'white' }}>
                                 {item.university}
                             </span>
                         ))
 
                     }
                 </div>
+                <div>
+                    <ul style={{ listStyle: "none", paddingLeft: 0 }} className="secondFooterSecCol">
+                        {blok.secondFooterSecCol?.map((item) => (
+                            <li key={item._uid}>
+                                <a
+                                    href={item.url?.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.Title}
+                                </a>
+                            </li>
+                        ))}
+
+                    </ul>
+                    <ul style={{ listStyle: "none", paddingLeft: 0 }} className="secondFooterThirdCol">
+                        {blok.secondFooterThirdCol?.map((item) => (
+                            <li key={item._uid}>
+                                <a
+                                    href={item.url?.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {item.title}
+                                </a>
+                            </li>
+                        ))}
+
+                    </ul>
+                    <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+                        {blok.secondFooterFourthCol?.map((item) => (
+                            <li key={item._uid}>
+                                <span
+                                    className="secondFooterFourthdCol"
+                                >
+                                    {item.Title}
+                                </span>
+                            </li>
+                        ))}
+
+                    </ul>
+                </div>
             </div>
+
 
         </footer>
     );

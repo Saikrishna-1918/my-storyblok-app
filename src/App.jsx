@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Myclasses from "./Myclasses";
 import MyCalendar from "./MyCalendar";
 import Layout from "./Layout";
+import ClassSearch from "./ClassSearch";
 
 function App() {
   const [story, setStory] = useState(null);
@@ -24,7 +25,7 @@ function App() {
           <Route path="/" element={<Navigate to="/my-classes" replace />} />
           <Route path="my-classes" element={<Myclasses />} />
           <Route path="my-calendar" element={<MyCalendar />} />
-          <Route path="/class-search" element={<div>Class Search Page</div>} />
+          <Route path="/class-search" element={<ClassSearch />} />
         </Route>
       </Routes>
     </BrowserRouter>
