@@ -2348,7 +2348,6 @@ export const AuthContextProvider = ({ children }) => {
         setClearPagenumber,
         viewDetailsData,
         setViewDetailsData,
-        selectedItems,
         searchAllCount,
         setSearchAllCount,
         setViewDetailsBoolean,
