@@ -1,7 +1,7 @@
 import { getStoryblokApi } from "@storyblok/react";
 import React, { useEffect, useState, useRef } from "react";
 import { Row, Col, Checkbox, Modal, Button, Input, Slider, Tooltip } from "antd";
-import filter_data from "./Allclasseslist.json";
+import filter_data from "./AllclassesList.json";
 import "./Allclasseslist.css";
 import "./myclasses.css";
 import "./classsearch.css";
