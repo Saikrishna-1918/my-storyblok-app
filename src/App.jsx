@@ -5,6 +5,7 @@ import Myclasses from "./Myclasses";
 import MyCalendar from "./MyCalendar";
 import Layout from "./Layout";
 import ClassSearch from "./ClassSearch";
+import { AuthContextProvider } from "./ContextApi/ContextApi";
 
 function App() {
   const [story, setStory] = useState(null);
@@ -20,14 +21,17 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route element={<Layout story={story} />}>
-          <Route path="/" element={<Navigate to="/my-classes" replace />} />
-          <Route path="my-classes" element={<Myclasses />} />
-          <Route path="my-calendar" element={<MyCalendar />} />
-          <Route path="/class-search" element={<ClassSearch />} />
-        </Route>
-      </Routes>
+      <AuthContextProvider>
+
+        <Routes>
+          <Route element={<Layout story={story} />}>
+            <Route path="/" element={<Navigate to="/my-classes" replace />} />
+            <Route path="my-classes" element={<Myclasses />} />
+            <Route path="my-calendar" element={<MyCalendar />} />
+            <Route path="/class-search" element={<ClassSearch />} />
+          </Route>
+        </Routes>
+      </AuthContextProvider>
     </BrowserRouter>
   );
 }

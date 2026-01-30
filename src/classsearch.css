@@ -12,10 +12,9 @@
 
 /* LEFT SIDEBAR */
 .filterSidebar {
-  flex: 0 0 calc(25% - 12px);
-  max-width: calc(25% - 12px);
+  flex: 0 0 calc(30% - 24px);
+  max-width: calc(30% - 24px);
   border: 1px solid #e5e7eb;
-  border-radius: 6px;
   padding: 16px;
   background: #fff;
 }

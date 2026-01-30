@@ -1,0 +1,545 @@
+{
+  "term_filters": [
+    {
+      "key": 1,
+      "term": "Autumn 2023",
+      "value": "Autumn 2023"
+    },
+    {
+      "key": 2,
+      "term": "Winter 2024",
+      "value": "Winter 2024"
+    }
+  ],
+
+  "days_filters": [
+    {
+      "key": 1,
+      "days": "Monday (3467)",
+      "value": "Monday"
+    },
+    {
+      "key": 2,
+      "days": "Tuesday (467)",
+      "value": "Tuesday"
+    },
+    {
+      "key": 3,
+      "days": "Wednesday (3346)",
+      "value": "Wednesday"
+    },
+    {
+      "key": 4,
+      "days": "Thursday (876)",
+      "value": "Thursday"
+    },
+    {
+      "key": 5,
+      "days": "Friday (978)",
+      "value": "Friday"
+    }
+  ],
+
+  "week_filters": [
+    {
+      "key": 1,
+      "day": "Monday (3467)",
+      "value": "Monday"
+    },
+    {
+      "key": 2,
+      "day": "Friday (978)",
+      "value": "Friday"
+    },
+    {
+      "key": 3,
+      "day": "Tuesday (467)",
+      "value": "Tuesday"
+    },
+    {
+      "key": 4,
+      "day": "Saturday (59)",
+      "value": "Saturday"
+    },
+    {
+      "key": 5,
+      "day": "Wednesday (3346)",
+      "value": "Wednesday"
+    },
+    {
+      "key": 6,
+      "day": "Sunday (21)",
+      "value": "Sunday"
+    },
+    {
+      "key": 7,
+      "day": "Thursday (876)",
+      "value": "Thursday"
+    }
+  ],
+
+  "format_filters": [
+    {
+      "key": 1,
+      "format": "Lecture (LEC) (348)",
+      "value": "Lecture (LEC)"
+    },
+    {
+      "key": 2,
+      "format": "Seminar (SEM) (547)",
+      "value": "Seminar (SEM)"
+    },
+    {
+      "key": 3,
+      "format": "Discussion (DIS) (349)",
+      "value": "Discussion (DIS)"
+    },
+    {
+      "key": 4,
+      "format": "Lab Section (LBS) (847)",
+      "value": "Lab Section (LBS)"
+    }
+  ],
+
+  "formats_filters": [
+    {
+      "key": 1,
+      "value": "Lecture (LEC)"
+    },
+    {
+      "key": 2,
+      "value": "Workshop (WKS)"
+    },
+    {
+      "key": 3,
+      "value": "Seminar (SEM)"
+    },
+    {
+      "key": 4,
+      "value": "Individual Study (INS)"
+    },
+    {
+      "key": 5,
+      "value": "Discussion (DIS)"
+    },
+    {
+      "key": 6,
+      "value": "SU Intro Dialogue - Sophomore (IDS)"
+    },
+    {
+      "key": 7,
+      "value": "Lab Section (LBS)"
+    },
+    {
+      "key": 8,
+      "value": "Thesis/Dissertation (T/D)"
+    },
+    {
+      "key": 9,
+      "value": "Case/Problem Study (CAS)"
+    },
+    {
+      "key": 10,
+      "value": "SU Intro Seminar - Sophomore (ISS)"
+    },
+    {
+      "key": 11,
+      "value": "Colloquium (COL)"
+    },
+    {
+      "key": 12,
+      "value": "Internship (ITR)"
+    },
+    {
+      "key": 13,
+      "value": "Activity (ACT)"
+    },
+    {
+      "key": 14,
+      "value": "Arts Intensive Program (API)"
+    },
+    {
+      "key": 15,
+      "value": "SU Intro Seminar - Freshman (ISF)"
+    },
+    {
+      "key": 16,
+      "value": "Computer Lab (CLB)"
+    },
+    {
+      "key": 17,
+      "value": "Clerkship (CLK)"
+    },
+    {
+      "key": 18,
+      "value": "Clinic (CLN)"
+    },
+    {
+      "key": 19,
+      "value": "Wet Lab (WLB)"
+    },
+    {
+      "key": 20,
+      "value": "Laboratory (LAB)"
+    },
+    {
+      "key": 21,
+      "value": "Practicum (PRA)"
+    },
+    {
+      "key": 22,
+      "value": "Language (LNG)"
+    },
+    {
+      "key": 23,
+      "value": "Problem Set (PRB)"
+    },
+    {
+      "key": 24,
+      "value": "Practicum (PRC)"
+    },
+    {
+      "key": 25,
+      "value": "Research Seminar (RES)"
+    },
+    {
+      "key": 26,
+      "value": "Research (RSC)"
+    },
+    {
+      "key": 27,
+      "value": "Sophomore College Seminar (SCS)"
+    },
+    {
+      "key": 28,
+      "value": "Simulation (SIM)"
+    },
+    {
+      "key": 29,
+      "value": "Tutorial (TUT)"
+    }
+  ],
+
+  "class_status_filters": [
+    {
+      "key": 1,
+      "class_status": "Open (1357)",
+      "value": "Open"
+    },
+    {
+      "key": 2,
+      "class_status": "Waitlist (596)",
+      "value": "Waitlist Only"
+    }
+  ],
+
+  "class_level_filters": [
+    {
+      "key": 1,
+      "class_level": "Undergraduate (1293)",
+      "value": "Undergraduate"
+    },
+    {
+      "key": 2,
+      "class_level": "Graduate (1993)",
+      "value": "Graduate"
+    },
+    {
+      "key": 3,
+      "class_level": "Graduate School of Business (765)",
+      "value": "Graduate School of Business"
+    },
+    {
+      "key": 4,
+      "class_level": "Law (678)",
+      "value": "Law"
+    },
+    {
+      "key": 5,
+      "class_level": "Medicine (567)",
+      "value": "Medicine"
+    }
+  ],
+
+  "grading_basis_filters": [
+    {
+      "key": 1,
+      "grading_basis": "Letter",
+      "value": "Letter(ABCD/NP)"
+    },
+    {
+      "key": 2,
+      "grading_basis": "Credit/No Credit",
+      "value": "Credit/No Credit"
+    },
+    {
+      "key": 3,
+      "grading_basis": "Satisfactory/No Credit",
+      "value": "Satisfactory/No Credit"
+    },
+    {
+      "key": 4,
+      "grading_basis": "Med +/-",
+      "value": "Med +/-"
+    },
+    {
+      "key": 5,
+      "grading_basis": "Law",
+      "value": "Law"
+    }
+  ],
+
+  "curated_classes_filters": [
+    {
+      "key": 1,
+      "curated_classes": "Frosh Friendly (437)",
+      "value": "Frosh Friendly"
+    },
+    {
+      "key": 2,
+      "curated_classes": "One Unit Wonders (49)",
+      "value": "One Unit Wonders"
+    },
+    {
+      "key": 3,
+      "curated_classes": "Terrific Twos (389)",
+      "value": "Terrific Twos"
+    }
+  ],
+
+  "curated_classes_more_filters": [
+    {
+      "key": 1,
+      "curated_classes_more": "Frosh Friendly (437)",
+      "value": "Frosh Friendly"
+    },
+    {
+      "key": 2,
+      "curated_classes_more": "CAS: Engineering (740)",
+      "value": "CAS: Engineering"
+    },
+    {
+      "key": 3,
+      "curated_classes_more": "One Unit Wonders (49)",
+      "value": "One Unit Wonders"
+    },
+    {
+      "key": 4,
+      "curated_classes_more": "CAS: Environment (57)",
+      "value": "CAS: Environment"
+    },
+    {
+      "key": 5,
+      "curated_classes_more": "Terrific Twos (389)",
+      "value": "Terrific Twos"
+    },
+    {
+      "key": 6,
+      "curated_classes_more": "CAS: Health (74)",
+      "value": "CAS: Health"
+    },
+    {
+      "key": 7,
+      "curated_classes_more": "Cardinal Service (CAS): All (5740)",
+      "value": "Cardinal Service"
+    },
+    {
+      "key": 8,
+      "curated_classes_more": "CAS: Human Rights (57)",
+      "value": "CAS: Human Rights"
+    },
+    {
+      "key": 9,
+      "curated_classes_more": "CAS: Education (5740)",
+      "value": "CAS: Education"
+    },
+    {
+      "key": 10,
+      "curated_classes_more": "CAS: Identity (40)",
+      "value": "CAS: Identity"
+    },
+    {
+      "key": 11,
+      "curated_classes_more": "CAS: General (90)",
+      "value": "CAS: General"
+    }
+  ],
+
+  "general_education_filters": [
+    {
+      "key": 1,
+      "general_education": "Aesthetic and Interpretive Inquiry (AII) (755)",
+      "value": "Aesthetic and Interpretive Inquiry (AII)"
+    },
+    {
+      "key": 2,
+      "general_education": "Applied Quantitative Reasoning (AQR) (478)",
+      "value": "Applied Quantitative Reasoning (AQR)"
+    },
+    {
+      "key": 3,
+      "general_education": "Creative Expression (CE) (87)",
+      "value": "Creative Expression (CE)"
+    },
+    {
+      "key": 4,
+      "general_education": "Ethical Reasoning (ER) (90)",
+      "value": "Ethical Reasoning (ER)"
+    }
+  ],
+
+  "more_general_education": [
+    {
+      "key": 1,
+      "general_education": "Aesthetic and Interpretive Inquiry (AII) (755)",
+      "value": "Aesthetic and Interpretive Inquiry (AII)"
+    },
+    {
+      "key": 2,
+      "general_education": "Applied Quantitative Reasoning (AQR) (90)",
+      "value": "Applied Quantitative Reasoning (AQR)"
+    },
+    {
+      "key": 3,
+      "general_education": "Creative Expression (CE) (459)",
+      "value": "Creative Expression (CE)"
+    },
+    {
+      "key": 4,
+      "general_education": "Ethical Reasoning (ER) (485)",
+      "value": "Ethical Reasoning (ER)"
+    },
+    {
+      "key": 5,
+      "general_education": "Exploring Difference and Power (EDP) (67)",
+      "value": "Exploring Difference and Power (EDP)"
+    },
+    {
+      "key": 6,
+      "general_education": "Formal Reasoning (FR) (489)",
+      "value": "Formal Reasoning (FR)"
+    },
+    {
+      "key": 7,
+      "general_education": "Scientific Method and Analysis (SMA) (80)",
+      "value": "Scientific Method and Analysis (SMA)"
+    },
+    {
+      "key": 8,
+      "general_education": "Social Inquiry (SI) (78)",
+      "value": "Social Inquiry (SI)"
+    },
+    {
+      "key": 9,
+      "general_education": "College (89)",
+      "value": "College"
+    }, {
+      "key": 10,
+      "general_education": "Language (89)",
+      "value": "Language"
+    },
+    {
+      "key": 11,
+      "general_education": "Writing 1 (234)",
+      "value": "Writing 1"
+    },
+    {
+      "key": 12,
+      "general_education": "Writing 2 (345)",
+      "value": "Writing 2"
+    },
+    {
+      "key": 13,
+      "general_education": "Writing SLE (234)",
+      "value": "Writing SLE"
+    }
+  ],
+
+  "schools_dep_filters": [
+    {
+      "key": 1,
+      "schools_dep": "Business",
+      "value": "Graduate School of Business"
+    },
+    {
+      "key": 2,
+      "schools_dep": "Education",
+      "value": "Graduate School of Education"
+    },
+    {
+      "key": 3,
+      "schools_dep": "Engineering",
+      "value": "School of Engineering"
+    },
+    {
+      "key": 4,
+      "schools_dep": "Humanities & Sciences",
+      "value": "Humanities & Sciences"
+    },
+    {
+      "key": 5,
+      "schools_dep": "Law",
+      "value": "Law School"
+    },
+    {
+      "key": 6,
+      "schools_dep": "Medicine",
+      "value": "School of Medicine"
+    },
+
+    {
+      "key": 7,
+      "schools_dep": "Sustainability",
+      "value": "Doerr School of Sustainability"
+    }
+  ],
+
+  "conflict_options_filters": [
+  {
+      "key": 1,
+      "conflict_option": "Remove Classes Requiring Consent",
+      "value": "NO_CONSENT"
+    },
+    {
+      "key": 2,
+      "conflict_option": "Remove Classes With Time Conflicts",
+      "value": "NO_CONFLICT"
+    }
+  ],
+
+  "grading_basis_optiosns_filters": [
+    {
+      "key": 1,
+      "grading_basis_option": "Letter",
+      "value": "Letter"
+    },
+    {
+      "key": 2,
+      "grading_basis_option": "Credit/No Credit",
+      "value": "Credit/No Credit"
+    },
+    {
+      "key": 3,
+      "grading_basis_option": "Satisfactory/No Credit",
+      "value": "Satisfactory/No Credit"
+    },
+    {
+      "key": 4,
+      "grading_basis_option": "Med +/-",
+      "value": "Med +/-"
+    },
+    {
+      "key": 5,
+      "grading_basis_option": "Law",
+      "value": "Law"
+    },
+    {
+      "key": 6,
+      "grading_basis_option": "GSB",
+      "value": "GSB"
+    }
+  ]
+
+   
+  
+}
