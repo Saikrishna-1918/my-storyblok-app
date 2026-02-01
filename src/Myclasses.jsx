@@ -5,8 +5,6 @@ import "./myclasses.css";
 function Myclasses() {
     const [blok, setBlok] = useState(null);
     const storyblokApi = getStoryblokApi();
-    console.log('blok', blok);
-
     useEffect(() => {
         storyblokApi
             .get("cdn/stories/home", { version: "published" }) // ✅ home

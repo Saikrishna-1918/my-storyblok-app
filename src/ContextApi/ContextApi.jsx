@@ -188,7 +188,6 @@ export const AuthContextProvider = ({ children }) => {
   const [subjectId, setSubjectId] = useState();
   const [time, setTime] = useState([7, 21]);
   const [numUnits, setNumUnits] = useState([0, 18]);
-  console.log('numUnits',numUnits);
   
   const [view, setView] = useState(false);
   const [viewCalendarMode, setviewCalendarMode] = useState(Views.WEEK);

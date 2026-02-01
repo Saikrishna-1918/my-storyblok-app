@@ -2,8 +2,6 @@ import "./footer.css";
 
 
 const Footer = ({ blok }) => {
-    console.log("Footer blok:", blok);
-
     return (
         <footer>
             <div className="top-nav-bar-first-row" style={{ marginTop: '15px' }}>

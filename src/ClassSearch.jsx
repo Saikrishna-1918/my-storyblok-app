@@ -15,7 +15,7 @@ import {
 const ClassSearch = () => {
     const [blok, setBlok] = useState(null);
     const storyblokApi = getStoryblokApi();
-    console.log('searchblok,', blok);
+    // console.log('searchblok,', blok);
     const [isTooltip, setIsToolTip] = useState("");
     const [isWidthLessThan768, setIsWidthLessThan768] = useState(
         window.innerWidth < 992
@@ -25,6 +25,8 @@ const ClassSearch = () => {
     const [statusMessage, setStatusMessage] = useState("");
     const [showMoreFormats, setShowMoreFormats] = useState(false);
     const [noOfUnitsModal, setNoOfUnitsModal] = useState(false);
+    const [showMoreGeneralEducation, setShowMoreGeneralEducation] =
+        useState(false);
 
     const getModalWidth = () => {
         if (window.innerWidth < 576) return "95%";
@@ -45,6 +47,12 @@ const ClassSearch = () => {
     };
     const handleClearAllBtnMouseOut = () => {
         setIsClearAllBtnHovered(false);
+    };
+    const handleClearAll = (e) => {
+        setSelectDay([]);
+        document.querySelectorAll(".filterCheckbox").forEach((checkbox) => {
+            checkbox.checked = false;
+        });
     };
     const handleApplyBtnMouseOut = () => {
         setSearchAllCount((prevCount) => prevCount + 1);
@@ -227,6 +235,16 @@ const ClassSearch = () => {
             setStatusMessage("");
         }
     }, [filteredSuggestions]);
+    const toolNumeberOfGenralEdcTipRef = useRef(null);
+    useEffect(() => {
+        // When tooltip becomes visible, focus the tooltip
+        if (
+            isTooltip === "Number of Units" &&
+            toolNumeberOfGenralEdcTipRef.current
+        ) {
+            toolNumeberOfGenralEdcTipRef.current.focus();
+        }
+    }, [isTooltip]);
     const handleNumUnitsApplyBtn = () => {
         setNoOfUnitsModal(false);
         setHandleUnitsBtnClick(!handelUnitsBtnClick);
@@ -541,6 +559,10 @@ const ClassSearch = () => {
         }
     }, [isTooltip]);
 
+    const getGradingBasisCount = (value) => {
+        const key = `by_gradingbasis_${value.toLowerCase()}`;
+        return allAttCounts?.[key] ?? 0;
+    };
     const tooltipRef = useRef(null);
 
     useEffect(() => {
@@ -601,19 +623,58 @@ const ClassSearch = () => {
 
     const NumberofUnits = blok.searchFilters?.find(
         (item) => item.component === "Number of Units"
-    )
+    );
     const NumberofUnitsTooltip = blok.searchFilters?.find(
         (item) => item.component === "Number of units ToolTip"
-    )
+    );
     const Time = blok.searchFilters?.find(
         (item) => item.component === "Time"
-    )
+    );
 
     const TimeToolTip = blok.searchFilters?.find(
         (item) => item.component === "TimeToolTip"
+    );
+    const classlevel = blok.searchFilters?.find(
+        (item) => item.component === "classlevel"
+    );
+    const classLevelToolTip = blok.searchFilters?.find(
+        (item) => item.component === "classleveltooltip"
     )
+    const gradingBasisTitle = blok.searchFilters?.find(
+        (item) => item.component === "GradingBasis"
+    );
+    const curatedClasses = blok.searchFilters?.find(
+        (item) => item.component === "Curated Classes"
+    );
 
+    const curatedClassesTooltip = blok.searchFilters?.find(
+        (item) => item.component === "Curated Classes Tooltip"
+    );
+    const generalEducation = blok.searchFilters?.find(
+        (item) => item.component === "General Education"
+    );
+    const generalEducationToolTip = blok.searchFilters?.find(
+        (item) => item.component === "General Education ToolTip"
+    );
 
+    const schools = blok.searchFilters?.find(
+        (item) => item.component === "Schools"
+    );
+    const schoolToolTip = blok.searchFilters?.find(
+        (item) => item.component === "SchoolsToolTip"
+    );
+    const otherFilters = blok.searchFilters?.find(
+        (item) => item.component === "Other Filters"
+    );
+    const applyButton = blok.searchFilters?.find(
+        (item) => item.component === "Apply"
+    );
+    const clearAllButton = blok.searchFilters?.find(
+        (item) => item.component === "clearall"
+    );
+    const showmore = blok.searchFilters?.find(
+        (item) => item.component === "showmore"
+    );
     return (
 
         <div className="classSearchPage">
@@ -1121,7 +1182,7 @@ const ClassSearch = () => {
                                         }
                                     }}
                                 >
-                                    Show more
+                                    {showmore?.Title}
                                 </u>
                                 {/* Days Modal */}
                                 <Modal
@@ -1410,7 +1471,7 @@ const ClassSearch = () => {
                                                         setIsOpenForUseEffect(false);
                                                     }}
                                                 >
-                                                    Apply
+                                                    {applyButton?.Title}
                                                 </Button>
                                                 <Button
                                                     style={{
@@ -1429,7 +1490,7 @@ const ClassSearch = () => {
                                                         handleclearDays();
                                                     }}
                                                 >
-                                                    Clear All
+                                                    {clearAllButton?.Title}
                                                 </Button>
                                             </Row>
                                         </Row>
@@ -1853,7 +1914,7 @@ const ClassSearch = () => {
                                         }
                                     }}
                                 >
-                                    Show more
+                                    {showmore?.Title}
                                 </u>
                                 {/* Format Modal */}
                                 <Modal
@@ -2009,7 +2070,7 @@ const ClassSearch = () => {
                                                     onMouseOver={handleApplyBtnMouseOver}
                                                     onMouseOut={handleApplyBtnMouseOut}
                                                 >
-                                                    Apply
+                                                    {applyButton?.Title}
                                                 </Button>
                                                 <Button
                                                     style={{
@@ -2028,7 +2089,7 @@ const ClassSearch = () => {
                                                         handleClearAllFormat();
                                                     }}
                                                 >
-                                                    Clear All
+                                                    {clearAllButton?.Title}
                                                 </Button>
                                             </Row>
                                         </Row>
@@ -2358,7 +2419,7 @@ const ClassSearch = () => {
                                                     onMouseOver={handleApplyBtnMouseOver}
                                                     onMouseOut={handleApplyBtnMouseOut}
                                                 >
-                                                    Apply
+                                                    {applyButton?.Title}
                                                 </Button>
                                                 <Button
                                                     style={{
@@ -2377,7 +2438,7 @@ const ClassSearch = () => {
                                                     onMouseOver={handleClearAllBtnMouseOver}
                                                     onMouseOut={handleClearAllBtnMouseOut}
                                                 >
-                                                    Clear All
+                                                    {clearAllButton?.Title}
                                                 </Button>
                                             </Row>
                                         </Row>
@@ -2742,7 +2803,7 @@ const ClassSearch = () => {
                                                     onMouseOut={handleApplyBtnMouseOut}
                                                     onClick={() => handleTimeApplyBtn()}
                                                 >
-                                                    Apply
+                                                    {applyButton?.Title}
                                                 </Button>
                                                 <Button
                                                     style={{
@@ -2761,7 +2822,7 @@ const ClassSearch = () => {
                                                     onMouseOver={handleClearAllBtnMouseOver}
                                                     onMouseOut={handleClearAllBtnMouseOut}
                                                 >
-                                                    Clear All
+                                                    {clearAllButton?.Title}
                                                 </Button>
                                             </Row>
                                         </Row>
@@ -2770,6 +2831,1281 @@ const ClassSearch = () => {
                             </Row>
                         )
                     }
+
+                    <Row
+                        id="classLevelRow"
+                        // aria-level={3}
+                        // role={isMobileView ? "button" : "heading"}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                toggleSection("classLevel");
+                            }
+                        }}
+
+                        onClick={() => {
+                            toggleSection("classLevel");
+                        }}
+                        style={{
+                            cursor: "pointer",
+                            justifyContent: 'space-between'
+                        }}
+                        role="heading"
+                        aria-level="3"
+                    // {...(isWidthLessThan768 ? { role: "heading" } : {})}
+                    // {...(isWidthLessThan768 ? { "aria-level": 3 } : {})}
+                    >
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            <span
+                                // {...(window.innerWidth < 993 && {
+                                //     tabIndex: "0",
+                                //     "aria-expanded":
+                                //         collapsedSections?.classLevel === true ? "true" : "false",
+                                // })}
+                                // role={isWidthLessThan768 ? "button" : 'heading'}
+                                // {...(isWidthLessThan768 ? {} : { "aria-level": 3 })}
+                                role="button"
+                                tabIndex="0"
+                                aria-expanded={collapsedSections?.classLevel === true ? "true" : "false"}                                            // onKeyDown={(e) => {
+                                //   if (e.key === "Enter" || e.key === " ") {
+                                //     toggleSection("classLevel");
+                                //   }
+                                // }}
+                                style={{
+                                    fontSize: "18px",
+                                    fontWeight: "700",
+                                    color: "#272E5C",
+                                }}
+                            >
+                                {classlevel?.Title}
+                            </span>
+                            {
+                                !isWidthLessThan768 && (
+                                    <div
+                                        style={{
+                                            position: "relative",
+                                            display: "inline-block",
+                                            // margin: "0px 3px -25px",
+                                            top: "4px",
+                                        }}
+                                        onMouseEnter={() => setIsToolTip("Class Level")}
+                                        onMouseLeave={() => setIsToolTip(false)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setIsToolTip("Class Level");
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                e.stopPropagation();
+                                                setIsToolTip("Class Level");
+                                            }
+                                        }}
+                                        onBlur={(e) => {
+                                            setIsToolTip(null);
+                                        }}
+                                    >
+                                        <button
+                                            aria-label="More information about Class Level"
+                                            // aria-describedby="Class-Level-info"
+                                            aria-expanded={
+                                                isTooltip === "Class Level" ? "true" : "false"
+                                            }
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                padding: 0,
+                                                cursor: "pointer",
+                                                // display: "inline-flex",
+                                                // alignItems: "center",
+                                                height: "10px",
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 22 25"
+                                                fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M16.0636 8.42777C16.0636 12.7285 12.5771 16.2149 8.27641 16.2149C3.97568 16.2149 0.489258 12.7285 0.489258 8.42777C0.489258 4.12705 3.97568 0.640625 8.27641 0.640625C12.5771 0.640625 16.0636 4.12705 16.0636 8.42777ZM9.2498 4.5342C9.2498 5.07179 8.814 5.50759 8.27641 5.50759C7.73882 5.50759 7.30301 5.07179 7.30301 4.5342C7.30301 3.99661 7.73882 3.56081 8.27641 3.56081C8.814 3.56081 9.2498 3.99661 9.2498 4.5342ZM7.30301 7.45438C6.76542 7.45438 6.32962 7.89018 6.32962 8.42777C6.32962 8.96536 6.76542 9.40117 7.30301 9.40117V12.3213C7.30301 12.8589 7.73882 13.2947 8.27641 13.2947H9.2498C9.78739 13.2947 10.2232 12.8589 10.2232 12.3213C10.2232 11.7838 9.78739 11.348 9.2498 11.348V8.42777C9.2498 7.89018 8.814 7.45438 8.27641 7.45438H7.30301Z"
+                                                    fill="#2E2D29"
+                                                />
+                                            </svg>
+                                        </button>
+
+                                        {isTooltip === "Class Level" && (
+                                            <div
+                                                id="Class-Level-info"
+                                                role="tooltip"
+                                                style={{
+                                                    position: "absolute",
+                                                    bottom: "100%",
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    background: "#f4f4f4",
+                                                    color: "var(--primaryBlue)",
+                                                    padding: "10px",
+                                                    border: "4px solid #f4f4f4",
+                                                    borderRadius: "4px",
+                                                    // marginBottom: "8px",
+                                                    width: "250px",
+                                                    zIndex: 100,
+                                                    boxShadow: "0px 8px 8px rgba(0, 0, 0, 0.1)",
+                                                }}
+                                            >
+                                                <p>
+                                                    {classLevelToolTip?.classLevelToolTip}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            }
+                        </div>
+                        <span
+                            // onClick={() => toggleSection("classLevel")}
+                            className="deskTopPlusMinus"
+                            // tabIndex="0"
+                            // aria-label="Close class Level list"
+                            // role="button"
+                            // onKeyDown={(e) => {
+                            //   if (e.key === "Enter" || e.key === " ") {
+                            //     toggleSection("classLevel");
+                            //   }
+                            // }}
+                            aria-hidden="true"
+                        >
+                            {collapsedSections?.classLevel ? "-" : "+"}
+                        </span>
+                    </Row>
+
+                    {
+                        collapsedSections?.classLevel && (
+                            <Row
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    width: "100%",
+                                    margin: "10px 0 0 0",
+                                    gap: "10px",
+                                }}
+                            >
+                                {filter_data &&
+                                    filter_data.class_level_filters.map((item) => {
+                                        const displayValue = allAttCounts?.[
+                                            `by_${item?.value
+                                                .toLowerCase()
+                                                .replaceAll(" ", "")}`
+                                        ]
+                                            ? "flex"
+                                            : "flex";
+                                        return (
+                                            <Col
+                                                key={item.key}
+                                                style={{ display: displayValue }}
+                                            >
+                                                <Checkbox
+                                                    className="class-level-filter-checkbox"
+                                                    key={item.key}
+                                                    style={{
+                                                        fontSize: "17px",
+                                                        fontWeight: "400",
+                                                    }}
+                                                    onChange={(e) => handleClassLevel(e)}
+                                                    value={item.value}
+                                                    checked={classLevelAtt?.[item?.value]}
+                                                >
+                                                    {item.value + " "}(
+                                                    {allAttCounts?.[
+                                                        `by_${item?.value
+                                                            .toLowerCase()
+                                                            .replaceAll(" ", "")}`
+                                                    ] || zeroValue}
+                                                    )
+                                                </Checkbox>
+                                            </Col>
+                                        );
+                                    })}
+                            </Row>
+                        )
+                    }
+                    {
+                        <Row
+                            id="classLevelRow"
+                            // aria-level={3}
+                            // role={isMobileView ? "button" : "heading"}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    toggleSection("gradingBasis");
+                                }
+                            }}
+
+                            onClick={() => {
+                                toggleSection("gradingBasis");
+                            }}
+                            style={{
+                                cursor: "pointer",
+                                justifyContent: 'space-between'
+                            }}
+                            role="heading"
+                            aria-level="3"
+                        // {...(isWidthLessThan768 ? { role: "heading" } : {})}
+                        // {...(isWidthLessThan768 ? { "aria-level": 3 } : {})}
+                        >
+                            <div style={{ display: 'flex', gap: '10px' }}>
+                                <span
+                                    // {...(window.innerWidth < 993 && {
+                                    //     tabIndex: "0",
+                                    //     "aria-expanded":
+                                    //         collapsedSections?.classLevel === true ? "true" : "false",
+                                    // })}
+                                    // role={isWidthLessThan768 ? "button" : 'heading'}
+                                    // {...(isWidthLessThan768 ? {} : { "aria-level": 3 })}
+                                    role="button"
+                                    tabIndex="0"
+                                    aria-expanded={collapsedSections?.gradingBasis === true ? "true" : "false"}                                            // onKeyDown={(e) => {
+                                    //   if (e.key === "Enter" || e.key === " ") {
+                                    //     toggleSection("classLevel");
+                                    //   }
+                                    // }}
+                                    style={{
+                                        fontSize: "18px",
+                                        fontWeight: "700",
+                                        color: "#272E5C",
+                                    }}
+                                >
+                                    {gradingBasisTitle?.Title}
+                                </span>
+                            </div>
+                            <span
+                                // onClick={() => toggleSection("classLevel")}
+                                className="deskTopPlusMinus"
+                                // tabIndex="0"
+                                // aria-label="Close class Level list"
+                                // role="button"
+                                // onKeyDown={(e) => {
+                                //   if (e.key === "Enter" || e.key === " ") {
+                                //     toggleSection("classLevel");
+                                //   }
+                                // }}
+                                aria-hidden="true"
+                            >
+                                {collapsedSections?.gradingBasis ? "-" : "+"}
+                            </span>
+                        </Row>
+                    }
+
+                    {
+                        collapsedSections?.gradingBasis && (
+                            <Row
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    width: "100%",
+                                    margin: "10px 0 0 0",
+                                    gap: "10px",
+                                }}
+                            >
+                                {gradingBasisFilter?.map((value) => {
+                                    const count = getGradingBasisCount(value);
+
+                                    return (
+                                        <Col key={value} style={{ display: "flex" }}>
+                                            <Checkbox
+                                                className="curated-classes-filter-checkbox"
+                                                style={{ fontSize: "17px", fontWeight: "400" }}
+                                                value={value}
+                                                checked={gradingBasis.includes(value)}
+                                                onChange={handleGradingBasis}
+                                            >
+                                                {value} ({count})
+                                            </Checkbox>
+                                        </Col>
+                                    );
+                                })}
+
+                            </Row>
+                        )
+                    }
+                    <Row
+                        id="curatedRow"
+                        // aria-level={3}
+                        // role={isMobileView ? "button" : "heading"}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                toggleSection("curatedClass");
+                            }
+                        }}
+
+                        onClick={() => {
+                            toggleSection("curatedClass");
+
+                        }}
+                        style={{
+                            cursor: "pointer",
+                            justifyContent: 'space-between'
+                        }}
+                        // {...(isWidthLessThan768 ? { role: "heading" } : {})}
+                        // {...(isWidthLessThan768 ? { "aria-level": 3 } : {})}
+                        role="heading"
+                        aria-level="3"
+                    >
+
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            <span
+                                // role={isWidthLessThan768 ? "button" : 'heading'}
+                                // {...(isWidthLessThan768 ? {} : { "aria-level": 3 })}
+                                // {...(window.innerWidth < 993 && {
+                                //     tabIndex: "0",
+                                //     "aria-expanded":
+                                //         collapsedSections?.curatedClass === true ? "true" : "false",
+                                // })}
+                                tabIndex="0"
+                                role="button"
+                                aria-expanded={collapsedSections?.curatedClass === true ? "true" : "false"}
+                                // onKeyDown={(e) => {
+                                //   if (e.key === "Enter" || e.key === " ") {
+                                //     toggleSection("curatedClass");
+                                //   }
+                                // }}
+                                style={{
+                                    fontSize: "18px",
+                                    fontWeight: "700",
+                                    color: "#272E5C",
+                                }}
+                            >
+                                {curatedClasses?.Title}
+                            </span>
+                            {
+                                !isWidthLessThan768 && (
+                                    <div
+                                        style={{
+                                            position: "relative",
+                                            display: "inline-block",
+                                            // margin: "0px 3px -25px",
+                                            top: "4px",
+                                        }}
+                                        onMouseEnter={() => setIsToolTip("Curated Classes")}
+                                        onMouseLeave={() => setIsToolTip(false)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setIsToolTip("Curated Classes");
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                e.stopPropagation();
+                                                setIsToolTip("Curated Classes");
+                                            }
+                                        }}
+                                        // tabIndex={0}
+                                        onBlur={(e) => {
+                                            if (
+                                                !e.currentTarget.contains(e.relatedTarget) &&
+                                                !tooltipRef.current?.contains(e.relatedTarget)
+                                            ) {
+                                                setIsToolTip(null);
+                                            }
+                                        }}
+                                    >
+                                        <button
+                                            aria-label="More information about Curated Classes"
+                                            // aria-describedby="Curated-Classes-info"
+                                            aria-expanded={
+                                                isTooltip === "Curated Classes" ? "true" : "false"
+                                            }
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                padding: 0,
+                                                cursor: "pointer",
+                                                // display: "inline-flex",
+                                                // alignItems: "center",
+                                                height: "10px",
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 22 25"
+                                                fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M16.0636 8.42777C16.0636 12.7285 12.5771 16.2149 8.27641 16.2149C3.97568 16.2149 0.489258 12.7285 0.489258 8.42777C0.489258 4.12705 3.97568 0.640625 8.27641 0.640625C12.5771 0.640625 16.0636 4.12705 16.0636 8.42777ZM9.2498 4.5342C9.2498 5.07179 8.814 5.50759 8.27641 5.50759C7.73882 5.50759 7.30301 5.07179 7.30301 4.5342C7.30301 3.99661 7.73882 3.56081 8.27641 3.56081C8.814 3.56081 9.2498 3.99661 9.2498 4.5342ZM7.30301 7.45438C6.76542 7.45438 6.32962 7.89018 6.32962 8.42777C6.32962 8.96536 6.76542 9.40117 7.30301 9.40117V12.3213C7.30301 12.8589 7.73882 13.2947 8.27641 13.2947H9.2498C9.78739 13.2947 10.2232 12.8589 10.2232 12.3213C10.2232 11.7838 9.78739 11.348 9.2498 11.348V8.42777C9.2498 7.89018 8.814 7.45438 8.27641 7.45438H7.30301Z"
+                                                    fill="#2E2D29"
+                                                />
+                                            </svg>
+                                        </button>
+
+                                        {isTooltip === "Curated Classes" && (
+                                            <div
+                                                id="Curated-Classes-info"
+                                                role="tooltip"
+                                                ref={tooltipRef}
+                                                // tabIndex={-1}
+                                                style={{
+                                                    position: "absolute",
+                                                    bottom: "100%",
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    background: "#f4f4f4",
+                                                    color: "var(--primaryBlue)",
+                                                    padding: "10px",
+                                                    border: "4px solid #f4f4f4",
+                                                    borderRadius: "4px",
+                                                    // marginBottom: "8px",
+                                                    width: "250px",
+                                                    zIndex: 100,
+                                                    boxShadow: "0px 8px 8px rgba(0, 0, 0, 0.1)",
+                                                }}
+                                            >
+                                                <div>
+                                                    <p>
+                                                        {curatedClassesTooltip?.CuratedClassesToolTip}
+                                                    </p>
+                                                    {/* <p>
+                                                        <a
+                                                            href="https://advising.stanford.edu/current-students/choosing-courses/frosh-friendly"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                color: "#1890ff",
+                                                                textDecoration: "underline",
+                                                            }}
+                                                        >
+                                                            Frosh-friendly classes
+                                                        </a>{" "}
+                                                        are selected by departments as excellent
+                                                        beginner opportunities to learn more about a
+                                                        field, department, or program.
+                                                    </p>
+                                                    <p>
+                                                        <a
+                                                            href="https://advising.stanford.edu/current-students/choosing-courses/wonders"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                color: "#1890ff",
+                                                                textDecoration: "underline",
+                                                            }}
+                                                        >
+                                                            One-Unit Wonders and Terrific Twos
+                                                        </a>{" "}
+                                                        are classes that offer one or two units of
+                                                        credit and provide learning opportunities that
+                                                        include introductions to a field, speaker
+                                                        series, and a variety of activities.
+                                                    </p> */}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            }
+
+                        </div>
+
+                        <span
+                            // onClick={() => toggleSection("curatedClass")}
+                            className="deskTopPlusMinus"
+                            // tabIndex="0"
+                            // aria-label="Close curated Class list"
+                            // role="button"
+                            // onKeyDown={(e) => {
+                            //   if (e.key === "Enter" || e.key === " ") {
+                            //     toggleSection("curatedClass");
+                            //   }
+                            // }}
+                            aria-hidden="true"
+                        >
+                            {collapsedSections?.curatedClass ? "-" : "+"}
+                        </span>
+
+                    </Row>
+                    {
+                        collapsedSections?.curatedClass && (
+                            <Row
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    width: "100%",
+                                    margin: "10px 0 0 0",
+                                    gap: "10px",
+                                }}
+                            >
+                                {filter_data &&
+                                    filter_data.curated_classes_filters.map((item) => {
+                                        const displayValue = allAttCounts?.[
+                                            `by_${item?.value
+                                                .toLowerCase()
+                                                .replaceAll(" ", "")}`
+                                        ]
+                                            ? "flex"
+                                            : "flex";
+                                        return (
+                                            <Col
+                                                key={item.key}
+                                                style={{ display: displayValue }}
+                                            >
+                                                <Checkbox
+                                                    className="curated-classes-filter-checkbox"
+                                                    key={item.key}
+                                                    style={{
+                                                        fontSize: "17px",
+                                                        fontWeight: "400",
+                                                    }}
+                                                    onChange={(e) => handleCurated(e)}
+                                                    value={item.value}
+                                                    checked={curatedAtt?.[item?.value]}
+                                                >
+                                                    {item.value} (
+                                                    {allAttCounts?.[
+                                                        `by_${item?.value
+                                                            .toLowerCase()
+                                                            .replaceAll(" ", "")}`
+                                                    ] || zeroValue}
+                                                    )
+                                                </Checkbox>
+                                            </Col>
+                                        );
+                                    })}
+
+                            </Row>
+                        )
+                    }
+                    <Row
+                        id="genEduRow"
+                        // aria-level={3}
+                        // role={isMobileView ? "button" : "heading"}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                toggleSection("generalEducation");
+                            }
+                        }}
+
+                        onClick={() => {
+                            toggleSection("generalEducation");
+
+                        }}
+                        style={{
+                            cursor: "pointer",
+                            justifyContent: "space-between"
+                        }}
+                        // {...(isWidthLessThan768 ? { role: "heading" } : {})}
+                        // {...(isWidthLessThan768 ? { "aria-level": 3 } : {})}
+                        role="heading"
+                        aria-level="3"
+                    >
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            <span
+                                // {...(window.innerWidth < 993 && {
+                                //     tabIndex: "0",
+                                //     "aria-expanded":
+                                //         collapsedSections?.generalEducation === true
+                                //             ? "true"
+                                //             : "false",
+                                // })}
+                                // role={isWidthLessThan768 ? "button" : 'heading'}
+                                // {...(isWidthLessThan768 ? {} : { "aria-level": 3 })}
+                                role="button"
+                                tabIndex="0"
+                                aria-expanded={collapsedSections?.generalEducation === true ? "true" : "false"}
+                                // onKeyDown={(e) => {
+                                //   if (e.key === "Enter" || e.key === " ") {
+                                //     toggleSection("generalEducation");
+                                //   }
+                                // }}
+                                style={{
+                                    fontSize: "18px",
+                                    fontWeight: "700",
+                                    color: "#272E5C",
+                                }}
+                            >
+                                {generalEducation?.Title}
+                            </span>
+                            {
+                                !isWidthLessThan768 && (
+                                    <div
+                                        style={{
+                                            position: "relative",
+                                            display: "inline-block",
+                                            // margin: "0px 3px -25px",
+                                            top: "4px",
+                                        }}
+                                        onMouseEnter={() => setIsToolTip("General Education")}
+                                        onMouseLeave={() => setIsToolTip(false)}
+                                        onClick={(e) => {
+                                            e.stopPropagation()
+                                            setIsToolTip("General Education");
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                e.stopPropagation();
+                                                setIsToolTip("General Education");
+                                            }
+                                        }}
+                                        onBlur={(e) => {
+                                            // Close tooltip if focus moves outside
+                                            if (
+                                                !e.currentTarget.contains(e.relatedTarget) &&
+                                                !tooltipRef.current?.contains(e.relatedTarget)
+                                            ) {
+                                                setIsToolTip(null);
+                                            }
+                                        }}
+                                    >
+                                        <button
+                                            aria-label="More information about General Education"
+                                            // aria-describedby="General-Education-info"
+                                            aria-expanded={
+                                                isTooltip === "General Education" ? "true" : "false"
+                                            }
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                padding: 0,
+                                                cursor: "pointer",
+                                                // display: "inline-flex",
+                                                // alignItems: "center",
+                                                height: "10px",
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 22 25"
+                                                fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M16.0636 8.42777C16.0636 12.7285 12.5771 16.2149 8.27641 16.2149C3.97568 16.2149 0.489258 12.7285 0.489258 8.42777C0.489258 4.12705 3.97568 0.640625 8.27641 0.640625C12.5771 0.640625 16.0636 4.12705 16.0636 8.42777ZM9.2498 4.5342C9.2498 5.07179 8.814 5.50759 8.27641 5.50759C7.73882 5.50759 7.30301 5.07179 7.30301 4.5342C7.30301 3.99661 7.73882 3.56081 8.27641 3.56081C8.814 3.56081 9.2498 3.99661 9.2498 4.5342ZM7.30301 7.45438C6.76542 7.45438 6.32962 7.89018 6.32962 8.42777C6.32962 8.96536 6.76542 9.40117 7.30301 9.40117V12.3213C7.30301 12.8589 7.73882 13.2947 8.27641 13.2947H9.2498C9.78739 13.2947 10.2232 12.8589 10.2232 12.3213C10.2232 11.7838 9.78739 11.348 9.2498 11.348V8.42777C9.2498 7.89018 8.814 7.45438 8.27641 7.45438H7.30301Z"
+                                                    fill="#2E2D29"
+                                                />
+                                            </svg>
+                                        </button>
+
+                                        {isTooltip === "General Education" && (
+                                            <div
+                                                id="General-Education-info"
+                                                role="tooltip"
+                                                ref={toolNumeberOfGenralEdcTipRef}
+                                                style={{
+                                                    position: "absolute",
+                                                    bottom: "100%",
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    background: "#f4f4f4",
+                                                    color: "var(--primaryBlue)",
+                                                    padding: "10px",
+                                                    border: "4px solid #f4f4f4",
+                                                    borderRadius: "4px",
+                                                    // marginBottom: "8px",
+                                                    width: "250px",
+                                                    zIndex: 100,
+                                                    boxShadow: "0px 8px 8px rgba(0, 0, 0, 0.1)",
+                                                }}
+                                            >
+                                                <div>
+                                                    <p>
+                                                        {generalEducationToolTip?.GeneralEducationToolTip}
+                                                    </p>
+                                                    {/* <p>
+                                                        Go to the Stanford Bulletin{" "}
+                                                        <a
+                                                            href="https://bulletin.stanford.edu/"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            style={{
+                                                                color: "#1890ff",
+                                                                textDecoration: "underline",
+                                                            }}
+                                                        >
+                                                            to learn more about the General Education
+                                                            requirements
+                                                        </a>
+                                                        .
+                                                    </p> */}
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            }
+                        </div>
+                        <span
+                            // onClick={() => toggleSection("generalEducation")}
+                            className="deskTopPlusMinus"
+                            // tabIndex="0"
+                            // aria-label="Close general Education list"
+                            // role="button"
+                            // onKeyDown={(e) => {
+                            //   if (e.key === "Enter" || e.key === " ") {
+                            //     toggleSection("generalEducation");
+                            //   }
+                            // }}
+                            aria-hidden="true"
+                        >
+                            {collapsedSections?.generalEducation ? "-" : "+"}
+                        </span>
+                    </Row>
+                    {
+                        collapsedSections?.generalEducation && (
+                            <Row
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    width: "100%",
+                                    margin: "10px 0 0 0",
+                                    gap: "10px",
+                                }}
+                            >
+                                {filter_data &&
+                                    filter_data.general_education_filters.map((item) => {
+                                        const displayValue = allAttCounts?.[
+                                            `by_${item?.value
+                                                .toLowerCase()
+                                                .replaceAll(" ", "")}`
+                                        ]
+                                            ? "flex"
+                                            : "flex";
+                                        return (
+                                            <Col
+                                                key={item.key}
+                                                style={{ display: displayValue }}
+                                            >
+                                                <Checkbox
+                                                    className="general-education-filter-checkbox"
+                                                    key={item.key}
+                                                    style={{
+                                                        fontSize: "17px",
+                                                        fontWeight: "400",
+                                                    }}
+                                                    onChange={(e) => handleEducation(e)}
+                                                    value={item.value}
+                                                    checked={generalEducationAtt?.[item?.value]}
+                                                >
+                                                    {item.value} (
+                                                    {allAttCounts?.[
+                                                        `by_${item?.value
+                                                            .toLowerCase()
+                                                            .replaceAll(" ", "")}`
+                                                    ] || zeroValue}
+                                                    )
+                                                </Checkbox>
+                                            </Col>
+                                        );
+                                    })}
+                                <u
+                                    style={{
+                                        fontSize: "16px",
+                                        fontWeight: "600",
+                                        color: "#007C92",
+                                        cursor: "pointer",
+                                    }}
+                                    onClick={() => {
+                                        setShowMoreGeneralEducation(true);
+                                        setGlobalModalOpen(true);
+                                        setIsOpenForUseEffect(true);
+                                    }}
+                                    tabIndex="0"
+                                    aria-label="Show more General Education"
+                                    role="button"
+                                    onKeyDown={(e) => {
+                                        if (e.key === "Enter" || e.key === " ") {
+                                            setShowMoreGeneralEducation(true);
+                                            setGlobalModalOpen(true);
+                                            setIsOpenForUseEffect(true);
+                                        }
+                                    }}
+                                >
+                                    {showmore?.Title}
+                                </u>
+                                {/* General Education Modal */}
+                                <Modal
+                                    centered
+                                    width={() => getModalWidth()}
+                                    open={showMoreGeneralEducation}
+                                    closable={false}
+                                    keyboard={true}
+                                    onCancel={() => {
+                                        // setEducation([]);
+                                        // setGeneralEducationAtt({});
+                                        setShowMoreGeneralEducation(false);
+                                    }}
+                                    footer={false}
+                                    style={{
+                                        borderRadius: "5px",
+                                    }}
+                                    afterOpenChange={(open) => {
+                                        if (open && showMoreGeneralEducation) {
+                                            const modals = document.querySelectorAll(".ant-modal");
+
+                                            modals.forEach((modal) => {
+                                                const style = window.getComputedStyle(modal);
+                                                if (style.display !== "none") {
+                                                    modal.setAttribute("aria-label", "General Education");
+
+                                                    const ariaHiddenDivs = modal.querySelectorAll('div[aria-hidden="true"]');
+                                                    ariaHiddenDivs.forEach((div) => {
+                                                        if (div.childNodes.length === 0 && div.offsetWidth === 0 && div.offsetHeight === 0) {
+                                                            div.remove();
+                                                        }
+                                                    });
+                                                }
+                                            });
+                                        }
+                                    }}
+                                >
+                                    <div
+                                    >
+                                        <Row
+                                            style={{ display: "flex", justifyContent: "end" }}
+                                        >
+                                            <CloseOutlined
+                                                tabIndex={0}
+                                                aria-label="close"
+                                                role="button"
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter" || e.key === " ") {
+                                                        setShowMoreGeneralEducation(false);
+                                                        setGlobalModalOpen(false);
+                                                        setIsOpenForUseEffect(false);
+                                                    }
+                                                }}
+                                                onClick={() => {
+                                                    setShowMoreGeneralEducation(false);
+                                                    setGlobalModalOpen(false);
+                                                    setIsOpenForUseEffect(false);
+                                                }}
+                                                style={{ fontSize: "18px", color: "#016895" }}
+                                            />
+                                        </Row>
+                                        <Row
+                                            className="general_education_modal_outer"
+                                        >
+                                            <Row style={{ width: "100%" }}>
+                                                <span
+                                                    style={{
+                                                        fontSize: "18px",
+                                                        fontWeight: "700",
+                                                        color: "#272E5C",
+                                                    }}
+                                                >
+                                                    {generalEducation?.Title}
+                                                </span>
+                                            </Row>
+                                            <Row
+                                                className="general_education_modal_body"
+                                            >
+                                                {filter_data &&
+                                                    filter_data?.more_general_education?.map(
+                                                        (item) => {
+                                                            const displayValue = allAttCounts?.[
+                                                                `by_${item?.value
+                                                                    .toLowerCase()
+                                                                    .replaceAll(" ", "")}`
+                                                            ]
+                                                                ? "flex"
+                                                                : "flex";
+                                                            return (
+                                                                <Col
+                                                                    className="general_education_modal_body_inner"
+                                                                    key={item.key}
+                                                                    style={{ display: displayValue }}
+                                                                >
+                                                                    <Checkbox
+                                                                        className="general-education-filter-checkbox general_education_modal_body_inner_p"
+                                                                        key={item.key}
+                                                                        onChange={(e) => handleEducation(e)}
+                                                                        onKeyDown={(e) => {
+                                                                            if (e.key === 'Enter' || e.key === ' ') {
+                                                                                e.preventDefault();
+                                                                                const syntheticEvent = {
+                                                                                    target: {
+                                                                                        value: item.value,
+                                                                                        checked: !generalEducationAtt?.[item.value],
+                                                                                    },
+                                                                                };
+                                                                                handleEducation(syntheticEvent);
+                                                                            }
+                                                                        }}
+                                                                        value={item.value}
+                                                                        checked={
+                                                                            generalEducationAtt?.[item?.value]
+                                                                        }
+                                                                    >
+                                                                        {item.value} (
+                                                                        {allAttCounts?.[
+                                                                            `by_${item?.value
+                                                                                .toLowerCase()
+                                                                                .replaceAll(" ", "")}`
+                                                                        ] || zeroValue}
+                                                                        )
+                                                                    </Checkbox>
+                                                                </Col>
+                                                            );
+                                                        }
+                                                    )}
+                                            </Row>
+                                            <Row
+                                                className="general_education_modal_footer"
+                                            >
+                                                <Button
+                                                    style={{
+                                                        backgroundColor: !isApplyBtnHovered
+                                                            ? "#006B81"
+                                                            : "#620059",
+                                                        border: !isApplyBtnHovered
+                                                            ? "1px solid #006B81"
+                                                            : "1px solid #620059",
+                                                        color: "#FFFFFF",
+                                                        borderRadius: "6px",
+                                                        fontSize: "14px",
+                                                        fontWeight: "700",
+                                                    }}
+                                                    onClick={() => {
+                                                        setShowMoreGeneralEducation(false);
+                                                        setGlobalModalOpen(false);
+                                                        setIsOpenForUseEffect(false);
+                                                    }}
+                                                    onMouseOver={handleApplyBtnMouseOver}
+                                                    onMouseOut={handleApplyBtnMouseOut}
+                                                >
+                                                    {applyButton?.Title}
+                                                </Button>
+                                                <Button
+                                                    style={{
+                                                        border: !isClearAllBtnHovered
+                                                            ? "1px solid #006B81"
+                                                            : "1px solid #620059",
+                                                        color: !isClearAllBtnHovered
+                                                            ? "#007C92"
+                                                            : "#620059",
+                                                        fontSize: "14px",
+                                                        fontWeight: "700",
+                                                    }}
+                                                    onMouseOver={handleClearAllBtnMouseOver}
+                                                    onMouseOut={handleClearAllBtnMouseOut}
+                                                    onClick={() => handleClearEducation()}
+                                                >
+                                                    {clearAllButton?.Title}
+                                                </Button>
+                                            </Row>
+                                        </Row>
+                                    </div>
+                                </Modal>
+                            </Row>
+                        )
+                    }
+                    <Row
+                        id="schAndDeptRow"
+                        // aria-level={3}
+                        // role={isMobileView ? "button" : "heading"}
+
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                toggleSection("schoolAndDepartment");
+                            }
+                        }}
+                        onClick={() => {
+                            toggleSection("schoolAndDepartment");
+                        }}
+                        style={{
+                            cursor: "pointer",
+                            justifyContent: 'space-between'
+                        }}
+                        role="heading"
+                        aria-level="3"
+                    // {...(isWidthLessThan768 ? { role: "heading" } : {})}
+                    // {...(isWidthLessThan768 ? { "aria-level": 3 } : {})}
+                    >
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            <span
+                                // {...(window.innerWidth < 993 && {
+                                //     tabIndex: "0",
+                                //     "aria-expanded":
+                                //         collapsedSections?.schoolAndDepartment === true
+                                //             ? "true"
+                                //             : "false",
+                                // })}
+                                // role={isWidthLessThan768 ? "button" : 'heading'}
+                                // {...(isWidthLessThan768 ? {} : { "aria-level": 3 })}
+                                // onKeyDown={(e) => {
+                                //   if (e.key === "Enter" || e.key === " ") {
+                                //     toggleSection("schoolAndDepartment");
+                                //   }
+                                // }}
+                                role="button"
+                                tabIndex="0"
+                                aria-expanded={collapsedSections?.schoolAndDepartment === true ? "true" : "false"}
+                                style={{
+                                    fontSize: "18px",
+                                    fontWeight: "700",
+                                    color: "#272E5C",
+                                }}
+                            >
+                                {schools?.Title}
+                            </span>
+                            {
+                                !isWidthLessThan768 && (
+                                    <div
+                                        style={{
+                                            position: "relative",
+                                            display: "inline-block",
+                                            // margin: "0px 3px -25px",
+                                            top: "4px",
+                                        }}
+                                        onMouseEnter={() => setIsToolTip("Schools")}
+                                        onMouseLeave={() => setIsToolTip(false)}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setIsToolTip("Schools");
+                                        }}
+                                        onKeyDown={(e) => {
+                                            if (e.key === "Enter") {
+                                                e.stopPropagation()
+                                                setIsToolTip("Schools");
+                                            }
+                                        }}
+                                        onBlur={(e) => {
+                                            setIsToolTip(null);
+                                        }}
+                                    >
+                                        <button
+                                            aria-label="More information about Schools"
+                                            // aria-describedby="Schools-info"
+                                            aria-expanded={
+                                                isTooltip === "Schools" ? "true" : "false"
+                                            }
+                                            style={{
+                                                background: "none",
+                                                border: "none",
+                                                padding: 0,
+                                                cursor: "pointer",
+                                                // display: "inline-flex",
+                                                // alignItems: "center",
+                                                height: "10px",
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="30"
+                                                height="29"
+                                                viewBox="0 0 22 25"
+                                                fill="none"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                    fillRule="evenodd"
+                                                    clipRule="evenodd"
+                                                    d="M16.0636 8.42777C16.0636 12.7285 12.5771 16.2149 8.27641 16.2149C3.97568 16.2149 0.489258 12.7285 0.489258 8.42777C0.489258 4.12705 3.97568 0.640625 8.27641 0.640625C12.5771 0.640625 16.0636 4.12705 16.0636 8.42777ZM9.2498 4.5342C9.2498 5.07179 8.814 5.50759 8.27641 5.50759C7.73882 5.50759 7.30301 5.07179 7.30301 4.5342C7.30301 3.99661 7.73882 3.56081 8.27641 3.56081C8.814 3.56081 9.2498 3.99661 9.2498 4.5342ZM7.30301 7.45438C6.76542 7.45438 6.32962 7.89018 6.32962 8.42777C6.32962 8.96536 6.76542 9.40117 7.30301 9.40117V12.3213C7.30301 12.8589 7.73882 13.2947 8.27641 13.2947H9.2498C9.78739 13.2947 10.2232 12.8589 10.2232 12.3213C10.2232 11.7838 9.78739 11.348 9.2498 11.348V8.42777C9.2498 7.89018 8.814 7.45438 8.27641 7.45438H7.30301Z"
+                                                    fill="#2E2D29"
+                                                />
+                                            </svg>
+                                        </button>
+
+                                        {isTooltip === "Schools" && (
+                                            <div
+                                                id="Schools-info"
+                                                role="tooltip"
+                                                style={{
+                                                    position: "absolute",
+                                                    bottom: "100%",
+                                                    left: "50%",
+                                                    transform: "translateX(-30%)",
+                                                    background: "#f4f4f4",
+                                                    color: "var(--primaryBlue)",
+                                                    padding: "10px",
+                                                    border: "4px solid #f4f4f4",
+                                                    borderRadius: "4px",
+                                                    // marginBottom: "8px",
+                                                    width: "250px",
+                                                    zIndex: 100,
+                                                    boxShadow: "0px 8px 8px rgba(0, 0, 0, 0.1)",
+                                                }}
+                                            >
+                                                <p>{schoolToolTip?.SchoolsToolTip}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )
+                            }
+                        </div>
+                        <span
+                            // onClick={() => toggleSection("schoolAndDepartment")}
+                            className="deskTopPlusMinus"
+                            // tabIndex="0"
+                            // aria-label="Close schools list"
+                            // role="button"
+                            // onKeyDown={(e) => {
+                            //   if (e.key === "Enter" || e.key === " ") {
+                            //     toggleSection("schoolAndDepartment");
+                            //   }
+                            // }}
+                            aria-hidden="true"
+                        >
+                            {collapsedSections?.schoolAndDepartment ? "-" : "+"}
+                        </span>
+                    </Row>
+                    {
+                        collapsedSections?.schoolAndDepartment && (
+                            <Row
+                                style={{
+                                    display: "flex",
+                                    flexDirection: "column",
+                                    width: "100%",
+                                    margin: "10px 0 0 0",
+                                    gap: "10px",
+                                }}
+                            >
+                                {filter_data &&
+                                    filter_data.schools_dep_filters.map((item) => {
+                                        const displayValue = allAttCounts?.[
+                                            `by_${item?.value
+                                                .toLowerCase()
+                                                .replaceAll(" ", "")}`
+                                        ]
+                                            ? "flex"
+                                            : "flex";
+                                        return (
+                                            <Col
+                                                key={item.key}
+                                                style={{ display: displayValue }}
+                                            >
+                                                <Checkbox
+                                                    className="schools-dep-filter-checkbox"
+                                                    key={item.key}
+                                                    value={item.value}
+                                                    style={{
+                                                        fontSize: "17px",
+                                                        fontWeight: "400",
+                                                    }}
+                                                    onChange={(e) => handleSchoolAndDept(e)}
+                                                    checked={schoolAtt?.[item?.value]}
+                                                >
+                                                    {item.schools_dep} (
+                                                    {allAttCounts?.[
+                                                        `by_${item?.value
+                                                            .toLowerCase()
+                                                            .replaceAll(" ", "")}`
+                                                    ] || zeroValue}
+                                                    )
+                                                </Checkbox>
+                                            </Col>
+                                        );
+                                    })}
+                            </Row>
+                        )
+                    }
+                    <Row
+                        id="schAndDeptRow"
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                toggleSection("conflictOptions");
+                            }
+                        }}
+                        onClick={() => {
+                            toggleSection("conflictOptions");
+                        }}
+                        style={{
+                            cursor: "pointer",
+                            justifyContent: 'space-between'
+                        }}
+                        role="heading"
+                        aria-level="3"
+                    >
+                        <div style={{ display: 'flex', gap: '10px' }}>
+                            <span
+                                role="button"
+                                tabIndex="0"
+                                aria-expanded={collapsedSections?.conflictOptions === true ? "true" : "false"}
+                                style={{
+                                    fontSize: "18px",
+                                    fontWeight: "700",
+                                    color: "#272E5C",
+                                }}
+                            >
+                                {otherFilters?.Title}
+                            </span>
+                        </div>
+                        <span
+                            className="deskTopPlusMinus"
+                            aria-hidden="true"
+                        >
+                            {collapsedSections?.conflictOptions ? "-" : "+"}
+                        </span>
+
+                    </Row>
+                    {collapsedSections?.conflictOptions && (
+                        <Row
+                            style={{
+                                display: "flex",
+                                flexDirection: "column",
+                                width: "100%",
+                                margin: "10px 0 0 0",
+                                gap: "10px",
+                            }}
+                        >
+                            {filter_data &&
+                                filter_data.conflict_options_filters.map((item) => {
+                                    const displayValue = allAttCounts?.[
+                                        `by_${item?.value
+                                            .toLowerCase()
+                                            .replaceAll(" ", "")}`
+                                    ]
+                                        ? "flex"
+                                        : "flex";
+                                    return (
+                                        <Col
+                                            key={item.key}
+                                            style={{ display: displayValue }}
+                                        >
+                                            <Checkbox
+                                                className="schools-dep-filter-checkbox"
+                                                key={item.key}
+                                                value={item.value}
+                                                style={{
+                                                    fontSize: "17px",
+                                                    fontWeight: "400",
+                                                }}
+                                                onChange={(e) => handleConsentConflcit(e, item)}
+                                                onKeyDown={(e) => {
+                                                    if (e.key === "Enter" || e.key === " ") {
+                                                        e.preventDefault();
+                                                        handleConsentConflcit(
+                                                            { target: { checked: !consentConflictValue?.some(x => x?.value === item?.value) } },
+                                                            item
+                                                        );
+                                                    }
+                                                }}
+                                                checked={consentConflictValue.some((x) => x?.value === item?.value)}
+
+                                            >
+                                                {item.conflict_option}
+                                                {item.value === "NO_CONSENT" && (
+                                                    <>
+                                                        {" "}(
+                                                        {allAttCounts?.[
+                                                            `by_${item.value.toLowerCase()}`
+                                                        ] || zeroValue}
+                                                        )
+                                                    </>
+                                                )}
+                                            </Checkbox>
+                                        </Col>
+                                    );
+                                })}
+                        </Row>
+                    )}
                 </div>
 
                 {/* RIGHT CONTENT */}
