@@ -1,5 +1,5 @@
 import { getStoryblokApi } from "@storyblok/react";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, isValidElement, cloneElement } from "react";
 import { Row, Col, Checkbox, Modal, Button, Input, Slider, Tooltip } from "antd";
 import filter_data from "./AllclassesList.json";
 import "./Allclasseslist.css";
@@ -11,11 +11,22 @@ import {
     DownOutlined,
     SearchOutlined
 } from "@ant-design/icons";
+import { Calendar, Views } from "react-big-calendar";
+
+import { dateFnsLocalizer } from "react-big-calendar";
+import { format, parse, startOfWeek, getDay } from "date-fns";
+import enUS from "date-fns/locale/en-US";
+import classEvents from './data/classEvents';
+import CalendarEventWrapper from "./CalendarEventWrapper";
+import AllClassCalendarToolBar from "./AllClassCalendarToolBar";
+import CustomEachEventWrapper from "./CustomEachEventWrapper";
+import DayViewEventsData from "./DayViewEventsData";
+
 
 const ClassSearch = () => {
     const [blok, setBlok] = useState(null);
     const storyblokApi = getStoryblokApi();
-    // console.log('searchblok,', blok);
+    console.log('searchblok,', blok);
     const [isTooltip, setIsToolTip] = useState("");
     const [isWidthLessThan768, setIsWidthLessThan768] = useState(
         window.innerWidth < 992
@@ -54,6 +65,17 @@ const ClassSearch = () => {
             checkbox.checked = false;
         });
     };
+    const locales = {
+        "en-US": enUS,
+    };
+
+    const localizer = dateFnsLocalizer({
+        format,
+        parse,
+        startOfWeek,
+        getDay,
+        locales,
+    })
     const handleApplyBtnMouseOut = () => {
         setSearchAllCount((prevCount) => prevCount + 1);
         setIsApplyBtnHovered(false);
@@ -92,7 +114,11 @@ const ClassSearch = () => {
         }
     }, [timeModal]);
     const contextData = UserAuth();
+    const {
+        focusedEventIdRef,
+        viewCalendarMode,
 
+    } = UserAuth();
 
     const instructorData = contextData?.instructorData;
     const myclassesFilteredDataEnroll = contextData?.myclassesFilteredDataEnroll;
@@ -249,6 +275,54 @@ const ClassSearch = () => {
         setNoOfUnitsModal(false);
         setHandleUnitsBtnClick(!handelUnitsBtnClick);
     };
+    const calendarRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (calendarRef.current && !calendarRef.current.contains(e.target)) {
+                setShowPopover(null); // Close popover when clicked outside
+            }
+        };
+
+        const handleFocusOutside = (e) => {
+            if (calendarRef.current && !calendarRef.current.contains(e.target)) {
+                setShowPopover(null); // Close popover on focus change outside
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("focusin", handleFocusOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("focusin", handleFocusOutside);
+        };
+    }, [setShowPopover]);
+    const [selectedEvent, setSelectedEvent] = useState(null);
+
+    useEffect(() => {
+        if (!focusedEventIdRef.current) return;
+
+        const id = focusedEventIdRef.current;
+
+        requestAnimationFrame(() => {
+            const el = document.querySelector(
+                `[data-event-id="${id}"]`
+            );
+
+            if (el) {
+                el.focus();
+            }
+
+            focusedEventIdRef.current = null;
+        });
+    }, [selectedEvent, viewCalendarMode]);
+
+    const minTime = new Date();
+    minTime.setHours(8, 0, 0);
+    const maxTime = new Date();
+    maxTime.setHours(21, 0, 0);
+
     const sliderTooltip = (value) => {
         return `${value} unit`;
     };
@@ -572,7 +646,43 @@ const ClassSearch = () => {
         }
     }, [isTooltip]);
     const closeModalButtonRef = useRef(null);
+    const CustomEventWrapper = ({ event, children }) => {
+        const modifiedChild = isValidElement(children)
+            ? cloneElement(children, {
+                onClick: (e) => {
+                    e.stopPropagation();
+                    setSelectedEvent(event);
+                    children.props.onClick?.(e);
+                },
+                onKeyDown: (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        e.stopPropagation();
 
+                        // ✅ store focused event
+                        focusedEventIdRef.current = event.id;
+
+                        setSelectedEvent(event);
+
+                        children.props.onKeyDown?.(e);
+                    }
+                },
+            })
+            : children;
+
+        return (
+            <>
+                {modifiedChild}
+                {/* {window.innerWidth >= 1024 ? (
+                    <DayViewEventsData daysEventsData={event} />
+                ) : (
+                    selectedEvent?.id === event.id && (
+                        <DayViewEventsData daysEventsData={event} />
+                    )
+                )} */}
+            </>
+        );
+    };
 
     // ✅ loading state
     if (!blok) {
@@ -675,14 +785,259 @@ const ClassSearch = () => {
     const showmore = blok.searchFilters?.find(
         (item) => item.component === "showmore"
     );
+    const viewmyschedule = blok.searchFilters?.find(
+        (item) => item.component === "viewmyschedule"
+    );
+    const donwarrow = blok.searchFilters?.find(
+        (item) => item.component === "DownArrow"
+    );
     return (
 
         <div className="classSearchPage">
+            <div style={{
+                width: '100%', display: 'flex'
+            }}>
+                <h2 style={{
+                    marginBottom: '30px', backgroundColor: '#651c32', padding: '5px 1vw 5px 0.78125vw', borderRadius: '0.6295907660020986vh 0.3125vw 0 0', cursor: 'pointer',
+                    flex: "0 0 calc(32% - 35px)",   // fixed in flex layout
+                    width: "calc(32% - 30px)",
+                    minWidth: "calc(32% - 30px)",
+                    maxWidth: "calc(32% - 35px)",
+                    boxSizing: "border-box",
+
+                }} className="filterSidebar">
+                    <Row
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            background: "#651c32",
+                            width: "100%",
+                            borderRadius: "0.6295907660020986vh 0.3125vw 0 0",
+                            // boxShadow: "0px 0px 0.4197271773347324vh 0px #00000040",
+                            padding: "10px 1.4vw 10px 0.78125vw",
+                            cursor: "pointer",
+                        }}
+                        onClick={() => {
+                            setDisplayCalendar(displayCalendar ? false : true);
+                        }}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                                setDisplayCalendar(displayCalendar ? false : true);
+                            }
+                        }}
+                        aria-expanded={displayCalendar ? true : false}
+                        tabIndex="0"
+                        role="button"
+                        aria-label={
+                            displayCalendar ? "My Schedule" : "View My Schedule"
+                        }
+                    >
+                        <Col xxl={23} xl={23} lg={23} md={20} xs={23}>
+                            <h2
+                                style={{
+                                    fontSize: "23px",
+                                    fontWeight: "700",
+                                    color: "#ffffff",
+                                    margin: "0",
+
+                                }}
+                            // aria-expanded={displayCalendar ? true : false}
+                            >
+                                {displayCalendar ? viewmyschedule?.myschedule : viewmyschedule?.viewmyschedule}
+                            </h2>
+
+                        </Col>
+                        <Col span={1}>
+                            <img
+                                src={displayCalendar ? donwarrow?.upArrow?.filename : donwarrow?.downArrow?.filename}
+                                alt={
+                                    displayCalendar ? "My Schedule" : "View My Schedule"
+                                }
+                                style={{
+                                    height: "16px",
+                                    cursor: "pointer",
+                                }}
+                            />
+                        </Col>
+                        {displayCalendar ? (
+                            <div style={{ width: "100%" }}>
+                                <Row
+                                    style={{
+                                        background: "#FFFFFF",
+                                        width: "100%",
+                                        margin: "2.0986358866736623vh 0 0 0",
+                                        padding: "3.147953830010493vh 3.125vw 0 2.0833333333333335vw",
+                                        // boxShadow: "0px 0px 0.4197271773347324vh 0px #00000040",
+                                    }}
+                                >
+                                    {/* <Row style={{ height: "81.84679958027283vh", width: "100%" }} ref={calendarRef}>
+                                        <Calendar
+                                            className="scheduled-calendar"
+                                            style={{ width: "100%" }}
+                                            views={{ work_week: true }}
+                                            popup={false}
+                                            // onView={(view) => setCurrentView(view)}
+                                            localizer={localizer}
+                                            defaultDate={new Date()}
+                                            defaultView={Views.WORK_WEEK}
+                                            events={classEvents}
+                                            step={60}
+                                            timeslots={1}
+                                            min={minTime}
+                                            max={maxTime}
+                                            components={{
+                                                event: CalendarEventWrapper,
+                                                toolbar: AllClassCalendarToolBar,
+                                                eventContainerWrapper: CustomEventWrapper,
+                                                eventWrapper: CustomEachEventWrapper,
+                                                // header: (label, date) =>
+                                                //   currentView === Views.WEEK ? (
+                                                //     <CustomWeekHeader prop={{ label }} date={date} />
+                                                //   ) : null,
+                                                // week: {
+                                                //   header: ({ label }) => <div className="rbc-header"></div>,
+                                                // },
+                                            }}
+                                            formats={{
+                                                timeGutterFormat: (date, culture, localizer) =>
+                                                    localizer.format(date, "h a", culture),
+                                                dayFormat: (date, culture, localizer) =>
+                                                    localizer.format(date, "dd", culture),
+                                                dateFormat: (date, culture, localizer) =>
+                                                    localizer.format(date, "D", culture),
+                                            }}
+                                            drilldownView={null}
+                                        // ariaRole="grid"
+                                        />
+                                    </Row> */}
+                                    {/* <h3 className="visually-hidden">Legend</h3>
+                                    <ul
+                                        style={{
+                                            display: "flex",
+                                            width: "100%",
+                                            flexDirection: isMobileView ? "row" : "row",
+                                            alignItems: isMobileView && "center",
+                                            gap: '10px',
+                                            padding: '15px'
+                                        }}
+                                    >
+                                        <li
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                gap: "0.4197271773347324vh 0.20833333333333334vw",
+                                            }}
+                                        >
+                                            <img
+                                                // tabIndex="0"
+                                                // role="presentation"
+                                                style={{ height: "1.888772298006296vh" }}
+                                                // src={EnrollStatusIcon}
+                                                alt="Green Checkmark within a circle indicating status as Enrolled"
+                                            />
+                                            <span
+                                                style={{
+                                                    fontSize: "14px",
+                                                    fontWeight: "600",
+                                                    color: "#272E5C",
+                                                    margin: "0",
+                                                }}
+                                            >
+                                                Enrolled
+                                            </span>
+                                        </li>
+                                        <li
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                gap: "0.4197271773347324vh 0.20833333333333334vw",
+                                            }}
+                                        >
+                                            <img
+                                                // tabIndex="0"
+                                                // role="presentation"
+                                                style={{ height: "1.888772298006296vh" }}
+                                                // src={WaitlistedIcon}
+                                                alt="Raised hand icon indicating status as Waitlisted"
+                                            />
+                                            <span
+                                                style={{
+                                                    fontSize: "14px",
+                                                    fontWeight: "600",
+                                                    color: "#272E5C",
+                                                    margin: "0",
+                                                }}
+                                            >
+                                                Waitlisted
+                                            </span>
+                                        </li>
+                                        <li
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                gap: "0.4197271773347324vh 0.20833333333333334vw",
+                                            }}
+                                        >
+                                            <img
+                                                // tabIndex="0"
+                                                // role="presentation"
+                                                style={{ height: "1.888772298006296vh" }}
+                                                // src={NotePad_Icon}
+                                                alt="Clipboard icon with a checkmark indicating status as Planned"
+                                            />
+                                            <span
+                                                style={{
+                                                    fontSize: "14px",
+                                                    fontWeight: "600",
+                                                    color: "#272E5C",
+                                                    margin: "0",
+                                                }}
+                                            >
+                                                Planned
+                                            </span>
+                                        </li>
+                                        <li
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center",
+                                                gap: "0.4197271773347324vh 0.20833333333333334vw",
+                                            }}
+                                        >
+                                            <img
+                                                // tabIndex="0"
+                                                // role="presentation"
+                                                style={{ height: "1.888772298006296vh" }}
+                                                // src={conflictIcon}
+                                                alt="Clock icon indicating status as Conflict"
+                                            />
+                                            <span
+                                                style={{
+                                                    fontSize: "14px",
+                                                    fontWeight: "600",
+                                                    color: "#272E5C",
+                                                    margin: "0",
+                                                }}
+                                            >
+                                                Conflict
+                                            </span>
+                                        </li>
+                                    </ul> */}
+                                </Row>
+                            </div>
+                        ) : (
+                            ""
+                        )}
+                    </Row>
+                </h2>
+            </div>
+
             <div className="classSearchLayout">
 
+
                 {/* LEFT FILTER SIDEBAR */}
-                <div className="filterSidebar">
+                <div className="filterSidebar" style={{ height: '60vh', overflowY: 'auto' }} >
                     <div className="filterHeader">
+
                         <h3 className="filterHeading">
                             {filterByBlock?.Title}
                         </h3>

@@ -42,14 +42,14 @@
 .top-nav-bar-second-row {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
   justify-content: space-between;
   width: 100%;
-  /* justify-content: space-between; */
-  /* padding: 0px 15px 5px 0px; */
   min-height: 50px;
-  margin-bottom: 10px;
+  background-color: #ffffff;
+  position: relative; /* 🔑 anchor underline */
+  margin-bottom: 0; /* 🔑 no gap before yellow bar */
 }
+
 .nav-bar-navigate-second-text {
   font-family:
     "Source Sans 3",
@@ -92,17 +92,77 @@
 }
 .tabs {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 15px;
-  font-size: 25px;
-  color: var(--primaryBlue) !important;
-  font-size: 20px !important;
-  font-weight: 400 !important;
-  /* font-family: Source Sans Pro; */
-  font-family: "Source Sans 3", sans-serif !important;
-  padding: 25px;
+  gap: 24px;
+  height: 100%;
 }
+.tab-item {
+  position: relative;
+  cursor: pointer;
+  padding: 22px 0;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 20px;
+  color: #2e2d5b;
+}
+.banner-container {
+  position: relative; /* 🔑 anchor children */
+  width: 100%;
+  height: 400px; /* adjust to match design */
+  overflow: hidden;
+}
+.stanford_banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 🔑 fills container */
+  display: block;
+}
+#welcome_span_tag {
+  position: absolute;
+  top: 120px;
+  left: 80px;
+
+  color: white;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 700;
+  text-align: center;
+  font-family: Source Serif Pro;
+}
+#announcementBox_C {
+  position: absolute;
+  top: 80px;
+  right: 80px;
+  width: 420px;
+}
+
+#announcementOuterBox_C {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#announcementOuterBox_C h2 {
+  margin-top: 0;
+  color: #1f3a8a;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; /* 🔑 directly under text */
+  height: 4px;
+  background-color: rgb(101, 28, 50);
+}
+
 .stanford_banner {
   width: 100%;
   display: -webkit-flex;
@@ -126,4 +186,14 @@ main {
   height: auto;
   /* width: 100vw; */
   background-color: #f5f5f5;
+}
+#announcementInnerBox_C p {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: justify;
+  margin-left: 20px;
+}
+#announcementInnerBox_C p a {
+  text-decoration: underline;
 }

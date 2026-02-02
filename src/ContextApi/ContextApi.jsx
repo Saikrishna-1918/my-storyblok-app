@@ -4,8 +4,8 @@ import allClassListJsonData from "../AllclassesList.json";
 import ReactDOM from "react-dom";
 import { Views } from "react-big-calendar";
 // import class_search_api_data from "../data/course_data/classSearchAPIData";
-// import myClassData from "../data/course_data/newApiData";
-// import allApiData from "../data/course_data/apiCourseData";
+import myClassData from "../data/newApiData";
+import allApiData from "../data/allApiData";
 // import ProxyResponse from "../data/course_data/ProxyResponse";
 // import holiday_calendar from "../data/course_data/HolidayCalendar";
 // import CampusData from "../data/course_data/Campus";
@@ -109,7 +109,7 @@ export const AuthContextProvider = ({ children }) => {
   const getLocationDescrKey = (descr) =>
     `by_location_${descr?.toLowerCase()}`;
   const getLocationCount = (descr) =>
-    allAttCounts?.[getLocationDescrKey(descr)] ??  0;
+    allAttCounts?.[getLocationDescrKey(descr)] ?? 0;
   const isChildChecked = (parentName, locationDescr) => {
     return (
       selectedCampus[parentName]?.some(
@@ -188,7 +188,7 @@ export const AuthContextProvider = ({ children }) => {
   const [subjectId, setSubjectId] = useState();
   const [time, setTime] = useState([7, 21]);
   const [numUnits, setNumUnits] = useState([0, 18]);
-  
+
   const [view, setView] = useState(false);
   const [viewCalendarMode, setviewCalendarMode] = useState(Views.WEEK);
   const targetTabRef = useRef(null);
@@ -701,6 +701,7 @@ export const AuthContextProvider = ({ children }) => {
         })
         .catch((err) => {
           console.log(err);
+
           // setClassSearchApiData(class_search_api_data);
         });
     }
@@ -744,6 +745,7 @@ export const AuthContextProvider = ({ children }) => {
     await axios
       .get(`/navenroll-api/getClassList`)
       .then((response) => {
+
         let data = response.data;
         if (typeof data === "string") {
           try {
@@ -752,7 +754,7 @@ export const AuthContextProvider = ({ children }) => {
               ?.replace(/,\s*}/g, "}")
               ?.replace(/,\s*]/g, "]");
 
-            data = JSON.parse(fixed);
+            data = JSON?.parse(fixed);
             setMyClassApiData(data?.response_data);
           } catch (e) {
             console.error("JSON parse failed even after fix:", e);
@@ -886,81 +888,81 @@ export const AuthContextProvider = ({ children }) => {
       })
       .catch((err) => {
         console.log(err);
-        // setCatchNoDataError(true);
-        // getClassSearchDefaultApiData("1246");
-        // setMyClassApiData(myClassData?.[0]?.response_data);
-        // setGraduateOrUnderGrList(
-        //   myClassData?.[0]?.response_data?.Careers?.Career
-        // );
-        // setMyclassApiDataResposneStatus(myClassData[0]?.response_status);
-        // setMyclassAppointmentsData(
-        //   myClassData?.[0]?.response_data?.Appointments
-        // );
-        // setGlobalTermId(myClassData?.[0]?.response_data?.Terms?.DefaultTerm);
-        // localStorage.setItem(
-        //   "term_data",
-        //   JSON.stringify(myClassData?.[0]?.response_data?.Terms?.Term)
-        // );
-        // setMyClassesFilteredData(
-        //   myClassData?.[0].response_data?.CareerGroup?.Careers
-        // );
-        // setMyclassFilteredDataEnroll(
-        //   myClassData[0]?.response_data?.CareerGroup?.Careers
-        // );
-        // setMyClassesPlannedData(
-        //   myClassData[0]?.response_data?.CareerClasspicks?.Careers
-        // );
-        // const careerGroupClasses =
-        //   myClassData[0].response_data?.CareerGroup?.Careers?.reduce(
-        //     (acc, career) => {
-        //       const classes = career?.Career?.Terms?.Term?.Classes?.Class || [];
-        //       return acc.concat(classes);
-        //     },
-        //     []
-        //   );
-        // const careerClasspicksClasses =
-        //   myClassData[0].response_data?.CareerClasspicks?.Careers?.reduce(
-        //     (acc, career) => {
-        //       const classPicks =
-        //         career?.Career?.Terms?.Term?.ClassPicks?.Classpick || [];
-        //       return acc.concat(
-        //         classPicks.map((classPick) => ({
-        //           ...classPick,
-        //           Source: "CareerClasspicks",
-        //         }))
-        //       );
-        //     },
-        //     []
-        //   );
-        // const classesArray = [
-        //   ...(careerGroupClasses || []),
-        //   ...(careerClasspicksClasses || []),
-        // ];
-        // setMyScheduleFilteredData(classesArray);
-        // const formattedData =
-        //   myClassData?.[0].response_data?.CareerGroup?.Careers?.flatMap(
-        //     (career) =>
-        //       career?.Career?.Terms?.Term?.Classes?.Class?.map((cls) => ({
-        //         strm: career?.Career?.Terms?.Term?.Code,
-        //         subject: cls?.Subject,
-        //         catalogNbr: cls?.CatalogNbr,
-        //         classNbr: cls?.Nbr,
-        //       }))
-        //   );
-        // const formattedData1 =
-        //   myClassData?.[0]?.response_data?.CareerClasspicks?.Careers?.flatMap(
-        //     (career) =>
-        //       career?.Career?.Terms?.Term?.ClassPicks?.Classpick?.map(
-        //         (cls) => ({
-        //           strm: career?.Career?.Terms?.Term?.Code,
-        //           subject: cls?.Subject,
-        //           catalogNbr: cls?.CatalogNbr,
-        //           classNbr: cls?.ClassNumber,
-        //         })
-        //       )
-        //   );
-        // const payload = [formattedData?.concat(formattedData1)];
-        // setMissingMyClassData(allApiData);
+        setCatchNoDataError(true);
+        getClassSearchDefaultApiData("1246");
+        setMyClassApiData(myClassData?.[0]?.response_data);
+        setGraduateOrUnderGrList(
+          myClassData?.[0]?.response_data?.Careers?.Career
+        );
+        setMyclassApiDataResposneStatus(myClassData[0]?.response_status);
+        setMyclassAppointmentsData(
+          myClassData?.[0]?.response_data?.Appointments
+        );
+        setGlobalTermId(myClassData?.[0]?.response_data?.Terms?.DefaultTerm);
+        localStorage.setItem(
+          "term_data",
+          JSON.stringify(myClassData?.[0]?.response_data?.Terms?.Term)
+        );
+        setMyClassesFilteredData(
+          myClassData?.[0].response_data?.CareerGroup?.Careers
+        );
+        setMyclassFilteredDataEnroll(
+          myClassData[0]?.response_data?.CareerGroup?.Careers
+        );
+        setMyClassesPlannedData(
+          myClassData[0]?.response_data?.CareerClasspicks?.Careers
+        );
+        const careerGroupClasses =
+          myClassData[0].response_data?.CareerGroup?.Careers?.reduce(
+            (acc, career) => {
+              const classes = career?.Career?.Terms?.Term?.Classes?.Class || [];
+              return acc.concat(classes);
+            },
+            []
+          );
+        const careerClasspicksClasses =
+          myClassData[0].response_data?.CareerClasspicks?.Careers?.reduce(
+            (acc, career) => {
+              const classPicks =
+                career?.Career?.Terms?.Term?.ClassPicks?.Classpick || [];
+              return acc.concat(
+                classPicks.map((classPick) => ({
+                  ...classPick,
+                  Source: "CareerClasspicks",
+                }))
+              );
+            },
+            []
+          );
+        const classesArray = [
+          ...(careerGroupClasses || []),
+          ...(careerClasspicksClasses || []),
+        ];
+        setMyScheduleFilteredData(classesArray);
+        const formattedData =
+          myClassData?.[0].response_data?.CareerGroup?.Careers?.flatMap(
+            (career) =>
+              career?.Career?.Terms?.Term?.Classes?.Class?.map((cls) => ({
+                strm: career?.Career?.Terms?.Term?.Code,
+                subject: cls?.Subject,
+                catalogNbr: cls?.CatalogNbr,
+                classNbr: cls?.Nbr,
+              }))
+          );
+        const formattedData1 =
+          myClassData?.[0]?.response_data?.CareerClasspicks?.Careers?.flatMap(
+            (career) =>
+              career?.Career?.Terms?.Term?.ClassPicks?.Classpick?.map(
+                (cls) => ({
+                  strm: career?.Career?.Terms?.Term?.Code,
+                  subject: cls?.Subject,
+                  catalogNbr: cls?.CatalogNbr,
+                  classNbr: cls?.ClassNumber,
+                })
+              )
+          );
+        const payload = [formattedData?.concat(formattedData1)];
+        setMissingMyClassData(allApiData);
       });
     value = "";
     setLoader(false);
@@ -999,7 +1001,15 @@ export const AuthContextProvider = ({ children }) => {
   useEffect(() => {
     getHolidayCalendarData();
   }, [default_seasons_term_Id, seasonsModalValue]);
+  useEffect(() => {
+    if (myClassApiData) {
+      console.log("myClassApiData updated:", myClassApiData);
+    }
+  }, [myClassApiData]);
+
   const getHolidayCalendarData = async () => {
+    setMyClassApiData(myClassData?.[0]?.response_data);
+
     const payload = {
       Service_Type: "Calendar",
       Sunetid: "inputsunetid",
@@ -1085,6 +1095,7 @@ export const AuthContextProvider = ({ children }) => {
         // setCampusFilter(CampusData.CAMPUS_FILTER);
         // setGradingBasisFilter(CampusData.GRADING_BASIS_FILTER[0].GRADING_BASIS_FILTER);
         // setSessionTimeOut("120");
+
         console.log(error);
         console.log("Piwik Api call failed");
       });
@@ -2004,7 +2015,7 @@ export const AuthContextProvider = ({ children }) => {
       }
     };
 
-    if (missingMyClassData ) {
+    if (missingMyClassData) {
       verifyInstructors();
     }
 
@@ -2072,7 +2083,7 @@ export const AuthContextProvider = ({ children }) => {
       }
     };
 
-    if (calssSearchApiData?.length > 0 ) {
+    if (calssSearchApiData?.length > 0) {
       verifyInstructorsFromClassSearch(searchData || "");
     }
 

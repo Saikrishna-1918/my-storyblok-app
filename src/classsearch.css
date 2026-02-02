@@ -1,6 +1,6 @@
 /* Page wrapper */
 .classSearchPage {
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 /* Two-column layout */
@@ -17,6 +17,7 @@
   border: 1px solid #e5e7eb;
   padding: 16px;
   background: #fff;
+  margin-bottom: 75px;
 }
 .filterHeader {
   display: flex;
@@ -61,6 +62,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.filterSidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .filterHeading {

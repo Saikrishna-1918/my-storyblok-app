@@ -14,7 +14,7 @@ const Layout = ({ story }) => {
           <StoryblokComponent blok={navbar} />
         </header>
       )}
-      <main style={{ padding: "20px" }}>
+      <main >
         <Outlet />
       </main>
       {footer && (

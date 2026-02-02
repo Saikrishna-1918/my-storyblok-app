@@ -1,13 +1,24 @@
+import { UserAuth } from "./ContextApi/ContextApi";
 import './Navbar.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 const NavBar = ({ blok }) => {
     const navigate = useNavigate();
     const location = useLocation();
+    // const { myClassApiData } = UserAuth();
+    const contextData = UserAuth();
+
+    const student_name = contextData?.myClassApiData
+    console.log('student_name', student_name);
+
 
     const handleTabChange = (route) => {
+        console.log('Navigating to route:', route);
+
         navigate(route);
     };
+    const currentRoute = location.pathname.replace("/", "");
+    console.log('location.pathname', location.pathname, blok.tabs?.map(tab => tab.route));
 
     return (
         <>
@@ -35,12 +46,8 @@ const NavBar = ({ blok }) => {
                                 <span
                                     key={tab._uid}
                                     onClick={() => handleTabChange(tab.route)}
-                                    style={{
-                                        cursor: "pointer",
-                                        marginRight: "16px",
-                                        fontWeight:
-                                            location.pathname === tab.route ? "bold" : "normal",
-                                    }}
+                                    className={`tab-item ${currentRoute === tab.route ? "active" : ""
+                                        }`}
                                 >
                                     {tab.label}
                                 </span>
@@ -51,22 +58,45 @@ const NavBar = ({ blok }) => {
                         <img
                             src={blok.logout_icon.filename}
                             alt="Logout"
-                            style={{ height: "20px", cursor: "pointer" }}
+                            style={{ height: "20px", cursor: "pointer", marginRight: '40px' }}
                         />
                     )}
                 </div>
             </div>
 
-            {
-                blok.stanford_banner?.filename &&
+            {blok.stanford_banner?.filename &&
                 location.pathname !== "/class-search" && (
-                    <img
-                        src={blok.stanford_banner.filename}
-                        alt="stanford_banner"
-                        className="stanford_banner"
-                    />
-                )
-            }
+                    <div className="banner-container">
+                        <img
+                            src={blok.stanford_banner.filename}
+                            alt="stanford_banner"
+                            className="stanford_banner"
+                        />
+
+                        <span id="welcome_span_tag">
+                            Welcome <br />
+                            {student_name && student_name}
+                        </span>
+
+                        <div id="announcementBox_C">
+                            <div id="announcementOuterBox_C">
+                                <h2>Announcements</h2>
+                                <div id="announcementInnerBox_C">
+                                    {/* {myClassApiData?.Messages && (
+                                        <p>
+                                            <div
+                                                dangerouslySetInnerHTML={{
+                                                    __html: myClassApiData?.Messages,
+                                                }}
+                                            />
+                                        </p>
+                                    )} */}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
 
         </>
     );
