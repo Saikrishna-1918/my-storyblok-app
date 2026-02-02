@@ -1,6 +1,6 @@
 import { Popover, Row } from "antd";
 import React, {useEffect, useState} from "react";
-import "./../src/AllclassesList.css";
+import "./AllclassesList.css";
 // import NotePad_Icon from "../../../../../assets/new-planned-icon.png";
 // import EnrollStatusIcon from "../../../../../assets/new-enrolled-icon.png";
 // import EnrollStatusIcon from "../../../../../assets/enroll-status-icon.png";
