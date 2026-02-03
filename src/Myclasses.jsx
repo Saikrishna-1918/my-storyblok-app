@@ -7,7 +7,6 @@ import { CloseOutlined, DownOutlined, SearchOutlined } from "@ant-design/icons";
 
 import { Button, Modal, Row, Space, Tabs } from "antd";
 function Myclasses() {
-
     
     const { calendarBlok, blok, myClassApiData, setSeasonTermDisplay, setSeasonsModalValue, handleClearAllFilters, seasonsModalValue, classBlok, myClassesFilteredData, myclassesFilteredDataEnroll, myClassesPlannedData } = UserAuth();
     const default_seasons_term = myClassApiData && myClassApiData?.Terms;
