@@ -1,0 +1,2102 @@
+{
+  "subjects": [
+    {
+      "key": 1,
+      "subject": "Arts & Humanities"
+    },
+    {
+      "key": 2,
+      "subject": "Engineering"
+    },
+    {
+      "key": 3,
+      "subject": "Languages"
+    },
+    {
+      "key": 4,
+      "subject": "Math & Sciences"
+    },
+    {
+      "key": 5,
+      "subject": "Professional"
+    },
+    {
+      "key": 6,
+      "subject": "Social Sciences"
+    },
+    {
+      "key": 7,
+      "subject": "Well Being"
+    }
+  ],"sub_subjects_well_being": [
+    {
+      "key": 1,
+      "id": "ATHLETIC",
+      "sub_subject": "Athletics, Physical Education, and Recreatio",
+      "value": "Athletics, Physical Education, and Recreatio",
+      "subjectName": "Well Being",
+      "subjectId": "WELLBEING"
+    },
+    {
+      "key": 2,
+      "id": "HORSE",
+      "sub_subject": "Horse",
+      "value": "Horse",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    },
+    {
+      "key": 3,
+      "id": "LEAD",
+      "sub_subject": "Leadership and Community",
+      "value": "Leadership and Community",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    },
+    {
+      "key": 4,
+      "id": "LIFE",
+      "sub_subject": "Lifeworks",
+      "value": "Lifeworks",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    },
+    {
+      "key": 5,
+      "id": "OUTDOOR",
+      "sub_subject": "Outdoor Education",
+      "value": "Outdoor Education",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    },
+    {
+      "key": 6,
+      "id": "PHYSWELL",
+      "sub_subject": "Physical Wellness",
+      "value": "Physical Wellness",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    },
+    {
+      "key": 7,
+      "id": "WELLNESS",
+      "sub_subject": "Wellness",
+      "value": "Wellness",
+      "subjectName": "Well Being",
+      "subjectId": "MMARTNHUM"
+    }
+  ],
+      "sub_subjects_art_humanities": [
+        {
+          "key": 1,
+          "id": "AFRICAAM",
+          "sub_subject": "African and African American Studies",
+          "value": "African and African American Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 2,
+          "id": "AMSTUD",
+          "sub_subject": "American Studies",
+          "value": "American Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 3,
+          "id": "ARTHIST",
+          "sub_subject": "Art History",
+          "value": "Art History",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 4,
+          "id": "ARTSINST",
+          "sub_subject": "Arts Institute",
+          "value": "Arts Institute",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 5,
+          "id": "ARTSTUDI",
+          "sub_subject": "Art Studio",
+          "value": "Art Studio",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 6,
+          "id": "ASNAMST",
+          "sub_subject": "Asian American Studies",
+          "value": "Asian American Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 7,
+          "id": "CHINA",
+          "sub_subject": "China",
+          "value": "China",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 8,
+          "id": "CLASSICS",
+          "sub_subject": "Classics",
+          "value": "Classics",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 9,
+          "id": "COMPLIT",
+          "sub_subject": "Comparative Literature",
+          "value": "Comparative Literature",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 10,
+          "id": "CSRE",
+          "sub_subject": "Comparative Studies in Race and Ethnicity",
+          "value": "Comparative Studies in Race and Ethnicity",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 11,
+          "id": "DANCE",
+          "sub_subject": "Dance",
+          "value": "Dance",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 12,
+          "id": "DESIGN",
+          "sub_subject": "Design",
+          "value": "Design",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 13,
+          "id": "DLCL",
+          "sub_subject": "Division of Languages, Cultures, and Literatures",
+          "value": "Division of Languages, Cultures, and Literatures",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 14,
+          "id": "EALC",
+          "sub_subject": "East Asian Languages and Cultures",
+          "value": "East Asian Languages and Cultures",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 15,
+          "id": "ENGLISH",
+          "sub_subject": "English",
+          "value": "English",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 16,
+          "id": "ESF",
+          "sub_subject": "Education as Self-Fashioning",
+          "value": "Education as Self-Fashioning",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 17,
+          "id": "ETHICSOC",
+          "sub_subject": "Ethics in Society",
+          "value": "Ethics in Society",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 18,
+          "id": "FEMGEN",
+          "sub_subject": "Feminist, Gender, and Sexuality Studies",
+          "value": "Feminist, Gender, and Sexuality Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 19,
+          "id": "FILMEDIA",
+          "sub_subject": "Film and Media Studies",
+          "value": "Film and Media Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 20,
+          "id": "FILMPROD",
+          "sub_subject": "Film Production",
+          "value": "Film Production",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 21,
+          "id": "FRENCH",
+          "sub_subject": "French",
+          "value": "French",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 22,
+          "id": "GERMAN",
+          "sub_subject": "German Studies",
+          "value": "German Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 23,
+          "id": "HISTORY",
+          "sub_subject": "History",
+          "value": "History",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 24,
+          "id": "HPS",
+          "sub_subject": "History and Philosophy of Science",
+          "value": "History and Philosophy of Science",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 25,
+          "id": "HUMCORE",
+          "sub_subject": "Humanities Core",
+          "value": "Humanities Core",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 26,
+          "id": "ILAC",
+          "sub_subject": "Iberian and Latin American Cultures",
+          "value": "Iberian and Latin American Cultures",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 27,
+          "id": "ITALIAN",
+          "sub_subject": "Italian",
+          "value": "Italian",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 28,
+          "id": "ITALIC",
+          "sub_subject": "Immersion in the Arts",
+          "value": "Immersion in the Arts",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 29,
+          "id": "JAPAN",
+          "sub_subject": "Japan",
+          "value": "Japan",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 30,
+          "id": "JEWISHST",
+          "sub_subject": "Jewish Studies",
+          "value": "Jewish Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 31,
+          "id": "KOREA",
+          "sub_subject": "Korea",
+          "value": "Korea",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 32,
+          "id": "LATINAM",
+          "sub_subject": "Latin American Studies",
+          "value": "Latin American Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 33,
+          "id": "LINGUIST",
+          "sub_subject": "Linguistics",
+          "value": "Linguistics",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 34,
+          "id": "MLA",
+          "sub_subject": "Master of Liberal Arts",
+          "value": "Master of Liberal Arts",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 35,
+          "id": "MTL",
+          "sub_subject": "Modern Thought and Literature",
+          "value": "Modern Thought and Literature",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 36,
+          "id": "MUSIC",
+          "sub_subject": "Music",
+          "value": "Music",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 37,
+          "id": "NATIVEAM",
+          "sub_subject": "Native American Studies",
+          "value": "Native American Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 38,
+          "id": "ORALCOMM",
+          "sub_subject": "Oral Communication",
+          "value": "Oral Communication",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 39,
+          "id": "PHIL",
+          "sub_subject": "Philosophy",
+          "value": "Philosophy",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 40,
+          "id": "PWR",
+          "sub_subject": "Program in Writing and Rhetoric",
+          "value": "Program in Writing and Rhetoric",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 41,
+          "id": "RELIGST",
+          "sub_subject": "Religious Studies",
+          "value": "Religious Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 42,
+          "id": "SLAVIC",
+          "sub_subject": "Slavic Studies",
+          "value": "Slavic Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 43,
+          "id": "SLE",
+          "sub_subject": "Structured Liberal Education",
+          "value": "Structured Liberal Education",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        },
+        {
+          "key": 44,
+          "id": "TAPS",
+          "sub_subject": "Theater and Performance Studies",
+          "value": "Theater and Performance Studies",
+          "subjectName": "Arts & Humanities",
+          "subjectId": "MMARTNHUM"
+        }
+      ]  
+  ,
+    "sub_subjects_engineering": [
+      {
+        "key": 1,
+        "id": "AA",
+        "sub_subject": "Aeronautics and Astronautics",
+        "value": "Aeronautics and Astronautics",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 2,
+        "id": "BIOE",
+        "sub_subject": "Bioengineering",
+        "value": "Bioengineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 3,
+        "id": "CEE",
+        "sub_subject": "Civil and Environmental Engineering",
+        "value": "Civil and Environmental Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 4,
+        "id": "CHEMENG",
+        "sub_subject": "Chemical Engineering",
+        "value": "Chemical Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 5,
+        "id": "CME",
+        "sub_subject": "Computational and Mathematical Engineering",
+        "value": "Computational and Mathematical Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 6,
+        "id": "CS",
+        "sub_subject": "Computer Science",
+        "value": "Computer Science",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 7,
+        "id": "DSCHOOL",
+        "sub_subject": "Hasso Plattner Institute of Design",
+        "value": "Hasso Plattner Institute of Design",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 8,
+        "id": "EE",
+        "sub_subject": "Electrical Engineering",
+        "value": "Electrical Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 9,
+        "id": "ENERGY",
+        "sub_subject": "Energy Science and Engineering",
+        "value": "Energy Science and Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 10,
+        "id": "ENGR",
+        "sub_subject": "Engineering",
+        "value": "Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 11,
+        "id": "MATSCI",
+        "sub_subject": "Materials Science & Engineering",
+        "value": "Materials Science & Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 12,
+        "id": "ME",
+        "sub_subject": "Mechanical Engineering",
+        "value": "Mechanical Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      },
+      {
+        "key": 13,
+        "id": "MS&E",
+        "sub_subject": "Management Science & Engineering",
+        "value": "Management Science & Engineering",
+        "subjectName": "Engineering",
+        "subjectId": "MMENG"
+      }
+    ]
+  ,
+    "sub_subjects_languages": [
+      {
+        "key": 1,
+        "id": "AMHRLANG",
+        "sub_subject": "Amharic Language",
+        "value": "Amharic Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 2,
+        "id": "ARABLANG",
+        "sub_subject": "Arabic Language",
+        "value": "Arabic Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 3,
+        "id": "ARMELANG",
+        "sub_subject": "Armenian Language",
+        "value": "Armenian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 4,
+        "id": "ASLLANG",
+        "sub_subject": "American Sign Language",
+        "value": "American Sign Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 5,
+        "id": "CATLANG",
+        "sub_subject": "Catalan Language",
+        "value": "Catalan Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 6,
+        "id": "CHINLANG",
+        "sub_subject": "Chinese Language",
+        "value": "Chinese Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 7,
+        "id": "CHRKELNG",
+        "sub_subject": "Cherokee Language",
+        "value": "Cherokee Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 8,
+        "id": "CZECLANG",
+        "sub_subject": "Czech Language",
+        "value": "Czech Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 9,
+        "id": "DUTCHLNG",
+        "sub_subject": "Dutch Language",
+        "value": "Dutch Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 10,
+        "id": "EFSLANG",
+        "sub_subject": "English for Foreign Students",
+        "value": "English for Foreign Students",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 11,
+        "id": "ESOLLANG",
+        "sub_subject": "English for Speakers of Other Languages",
+        "value": "English for Speakers of Other Languages",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 12,
+        "id": "FILILANG",
+        "sub_subject": "Filipino Language",
+        "value": "Filipino Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 13,
+        "id": "FINNLANG",
+        "sub_subject": "Finnish Language",
+        "value": "Finnish Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 14,
+        "id": "FRENLANG",
+        "sub_subject": "French Language",
+        "value": "French Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 15,
+        "id": "GERLANG",
+        "sub_subject": "German Language",
+        "value": "German Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 16,
+        "id": "GREELANG",
+        "sub_subject": "Modern Greek Language",
+        "value": "Modern Greek Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 17,
+        "id": "GUJARLNG",
+        "sub_subject": "Gujarati Language",
+        "value": "Gujarati Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 18,
+        "id": "HAITLANG",
+        "sub_subject": "Haitian Creole Language",
+        "value": "Haitian Creole Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 19,
+        "id": "HAWALANG",
+        "sub_subject": "Hawaiian Language",
+        "value": "Hawaiian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 20,
+        "id": "HEBRLANG",
+        "sub_subject": "Hebrew Language",
+        "value": "Hebrew Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 21,
+        "id": "HINDLANG",
+        "sub_subject": "Hindi Language",
+        "value": "Hindi Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 22,
+        "id": "HITTLANG",
+        "sub_subject": "Hittite Language",
+        "value": "Hittite Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 23,
+        "id": "HNGRLANG",
+        "sub_subject": "Hungarian Language",
+        "value": "Hungarian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 24,
+        "id": "IGBOLANG",
+        "sub_subject": "Igbo Language",
+        "value": "Igbo Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 25,
+        "id": "INDOLANG",
+        "sub_subject": "Indonesian Language",
+        "value": "Indonesian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 26,
+        "id": "INUPQLNG",
+        "sub_subject": "Inupiaq Language",
+        "value": "Inupiaq Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 27,
+        "id": "ITALLANG",
+        "sub_subject": "Italian Language",
+        "value": "Italian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 28,
+        "id": "JAPANLNG",
+        "sub_subject": "Japanese Language",
+        "value": "Japanese Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 29,
+        "id": "KAZKHLNG",
+        "sub_subject": "Kazakh Language",
+        "value": "Kazakh Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 30,
+        "id": "KHMRLANG",
+        "sub_subject": "Khmer Language",
+        "value": "Khmer Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 31,
+        "id": "KINYLANG",
+        "sub_subject": "Kinyarwanda Language",
+        "value": "Kinyarwanda Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 32,
+        "id": "KORLANG",
+        "sub_subject": "Korean Language",
+        "value": "Korean Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 33,
+        "id": "LAKOTLNG",
+        "sub_subject": "Lakota Language",
+        "value": "Lakota Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 34,
+        "id": "LUGALANG",
+        "sub_subject": "Luganda Language",
+        "value": "Luganda Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 35,
+        "id": "NAHUALNG",
+        "sub_subject": "Nahuatl Language",
+        "value": "Nahuatl Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 36,
+        "id": "NVJOLANG",
+        "sub_subject": "Navajo Language",
+        "value": "Navajo Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 37,
+        "id": "OROMLANG",
+        "sub_subject": "Oromo Language",
+        "value": "Oromo Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 38,
+        "id": "PERSLANG",
+        "sub_subject": "Persian Language",
+        "value": "Persian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 39,
+        "id": "POLSHLNG",
+        "sub_subject": "Polish Language",
+        "value": "Polish Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 40,
+        "id": "PORTLANG",
+        "sub_subject": "Portuguese Language",
+        "value": "Portuguese Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 41,
+        "id": "PUNJLANG",
+        "sub_subject": "Punjabi Language",
+        "value": "Punjabi Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 42,
+        "id": "QUECHLNG",
+        "sub_subject": "Quechua Language",
+        "value": "Quechua Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 43,
+        "id": "ROMALANG",
+        "sub_subject": "Romanian Language",
+        "value": "Romanian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 44,
+        "id": "RUSSLANG",
+        "sub_subject": "Russian Language",
+        "value": "Russian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 45,
+        "id": "SAMOALNG",
+        "sub_subject": "Samoan Language",
+        "value": "Samoan Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 46,
+        "id": "SERBLANG",
+        "sub_subject": "Serbian Language",
+        "value": "Serbian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 47,
+        "id": "SLAVLANG",
+        "sub_subject": "Slavic Language",
+        "value": "Slavic Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 48,
+        "id": "SLVNLANG",
+        "sub_subject": "Slovenian Language",
+        "value": "Slovenian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 49,
+        "id": "SNSKTLNG",
+        "sub_subject": "Sanskrit Language",
+        "value": "Sanskrit Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 50,
+        "id": "SPANLANG",
+        "sub_subject": "Spanish Language",
+        "value": "Spanish Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 51,
+        "id": "SWAHLANG",
+        "sub_subject": "Swahili Language",
+        "value": "Swahili Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 52,
+        "id": "TAMILANG",
+        "sub_subject": "Tamil Language",
+        "value": "Tamil Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 53,
+        "id": "TELULANG",
+        "sub_subject": "Telugu Language",
+        "value": "Telugu Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 54,
+        "id": "TIBETLNG",
+        "sub_subject": "Tibetan Language",
+        "value": "Tibetan Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 55,
+        "id": "TIGRYLNG",
+        "sub_subject": "Tigrinya Language",
+        "value": "Tigrinya Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 56,
+        "id": "TURKLANG",
+        "sub_subject": "Turkish Language",
+        "value": "Turkish Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 57,
+        "id": "TWILANG",
+        "sub_subject": "Twi Language",
+        "value": "Twi Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 58,
+        "id": "UKRNLANG",
+        "sub_subject": "Ukrainian Language",
+        "value": "Ukrainian Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 59,
+        "id": "URDULANG",
+        "sub_subject": "Urdu Language",
+        "value": "Urdu Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 60,
+        "id": "UYGHLANG",
+        "sub_subject": "Uyghur Language",
+        "value": "Uyghur Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 61,
+        "id": "VIETLANG",
+        "sub_subject": "Vietnamese Language",
+        "value": "Vietnamese Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 62,
+        "id": "YDDSHLNG",
+        "sub_subject": "Yiddish Language",
+        "value": "Yiddish Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 63,
+        "id": "YORULANG",
+        "sub_subject": "Yoruba Language",
+        "value": "Yoruba Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 64,
+        "id": "YUPKLANG",
+        "sub_subject": "Yup'ik Language",
+        "value": "Yup'ik Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      },
+      {
+        "key": 65,
+        "id": "ZULULANG",
+        "sub_subject": "Zulu Language",
+        "value": "Zulu Language",
+        "subjectName": "Languages",
+        "subjectId": "MMLANG"
+      }
+    ]
+  ,
+    "sub_subjects_math_and_sciences": [
+      {
+        "key": 1,
+        "sub_subject": "Applied Physics",
+        "value": "Applied Physics",
+        "id": "APPPHYS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 2,
+        "sub_subject": "Biology",
+        "value": "Biology",
+        "id": "BIO",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 3,
+        "sub_subject": "Biophysics",
+        "value": "Biophysics",
+        "id": "BIOPHYS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 4,
+        "sub_subject": "Chemistry",
+        "value": "Chemistry",
+        "id": "CHEM",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 5,
+        "sub_subject": "Data Science",
+        "value": "Data Science",
+        "id": "DATASCI",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 6,
+        "sub_subject": "Earth Systems",
+        "value": "Earth Systems",
+        "id": "EARTHSYS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 7,
+        "sub_subject": "Environmental Behavioral Science",
+        "value": "Environmental Behavioral Science",
+        "id": "EBS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 8,
+        "sub_subject": "Environment and Resources",
+        "value": "Environment and Resources",
+        "id": "ENVRES",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 9,
+        "sub_subject": "Earth and Planetary Sciences",
+        "value": "Earth and Planetary Sciences",
+        "id": "EPS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 10,
+        "sub_subject": "Earth System Science",
+        "value": "Earth System Science",
+        "id": "ESS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 11,
+        "sub_subject": "Geological Sciences",
+        "value": "Geological Sciences",
+        "id": "GEOLSCI",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 12,
+        "sub_subject": "Geophysics",
+        "value": "Geophysics",
+        "id": "GEOPHYS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 13,
+        "sub_subject": "Global Environmental Policy",
+        "value": "Global Environmental Policy",
+        "id": "GEP",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 14,
+        "sub_subject": "Human Biology",
+        "value": "Human Biology",
+        "id": "HUMBIO",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 15,
+        "sub_subject": "Mathematics",
+        "value": "Mathematics",
+        "id": "MATH",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 16,
+        "sub_subject": "Mathematical and Computational Science",
+        "value": "Mathematical and Computational Science",
+        "id": "MCS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 17,
+        "sub_subject": "Oceans",
+        "value": "Oceans",
+        "id": "OCEANS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 18,
+        "sub_subject": "Photon Science, SLAC",
+        "value": "Photon Science, SLAC",
+        "id": "PHOTON",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 19,
+        "sub_subject": "Physics",
+        "value": "Physics",
+        "id": "PHYSICS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 20,
+        "sub_subject": "Scientific Computing and Computational Math",
+        "value": "Scientific Computing and Computational Math",
+        "id": "SCCM",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 21,
+        "sub_subject": "Statistics",
+        "value": "Statistics",
+        "id": "STATS",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 22,
+        "sub_subject": "Sustainability Science & Practice",
+        "value": "Sustainability Science & Practice",
+        "id": "SUST",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      },
+      {
+        "key": 23,
+        "sub_subject": "Sustainability",
+        "value": "Sustainability",
+        "id": "SUSTAIN",
+        "subjectName": "Math & Sciences",
+        "subjectId": "MMMATNSCI"
+      }
+    ]
+  ,
+    "sub_subjects_professional": [
+      {
+        "key": 1,
+        "sub_subject": "Accounting",
+        "value": "Accounting",
+        "id": "ACCT",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 2,
+        "sub_subject": "Action Learning Program",
+        "value": "Action Learning Program",
+        "id": "ALP",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 3,
+        "sub_subject": "Anesthesia",
+        "value": "Anesthesia",
+        "id": "ANES",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 4,
+        "sub_subject": "Biochemistry",
+        "value": "Biochemistry",
+        "id": "BIOC",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 5,
+        "sub_subject": "Biomedical Data Sciences",
+        "value": "Biomedical Data Sciences",
+        "id": "BIODS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 6,
+        "sub_subject": "Biomedical Informatics",
+        "value": "Biomedical Informatics",
+        "id": "BIOMEDIN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 7,
+        "sub_subject": "Biosciences Interdisciplinary",
+        "value": "Biosciences Interdisciplinary",
+        "id": "BIOS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 8,
+        "sub_subject": "Biomedical Physics",
+        "value": "Biomedical Physics",
+        "id": "BMP",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 9,
+        "sub_subject": "Business General Pathways",
+        "value": "Business General Pathways",
+        "id": "BUSGEN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 10,
+        "sub_subject": "Cancer Biology",
+        "value": "Cancer Biology",
+        "id": "CBIO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 11,
+        "sub_subject": "Community Health & Prevention Research",
+        "value": "Community Health & Prevention Research",
+        "id": "CHPR",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 12,
+        "sub_subject": "Clinical Informatics Management",
+        "value": "Clinical Informatics Management",
+        "id": "CIM",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 13,
+        "sub_subject": "Comparative Medicine",
+        "value": "Comparative Medicine",
+        "id": "COMPMED",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 14,
+        "sub_subject": "Chemical and Systems Biology",
+        "value": "Chemical and Systems Biology",
+        "id": "CSB",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 15,
+        "sub_subject": "Center for Teaching and Learning",
+        "value": "Center for Teaching and Learning",
+        "id": "CTL",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 16,
+        "sub_subject": "Cardiothoracic Surgery",
+        "value": "Cardiothoracic Surgery",
+        "id": "CTS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 17,
+        "sub_subject": "Developmental Biology",
+        "value": "Developmental Biology",
+        "id": "DBIO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 18,
+        "sub_subject": "Dermatology",
+        "value": "Dermatology",
+        "id": "DERM",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 19,
+        "sub_subject": "Education",
+        "value": "Education",
+        "id": "EDUC",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 20,
+        "sub_subject": "Emergency Medicine",
+        "value": "Emergency Medicine",
+        "id": "EMED",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 21,
+        "sub_subject": "Epidemiology",
+        "value": "Epidemiology",
+        "id": "EPI",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 22,
+        "sub_subject": "Family and Community Medicine",
+        "value": "Family and Community Medicine",
+        "id": "FAMMED",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 23,
+        "sub_subject": "Finance",
+        "value": "Finance",
+        "id": "FINANCE",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 24,
+        "sub_subject": "Genetics",
+        "value": "Genetics",
+        "id": "GENE",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 25,
+        "sub_subject": "GSB General and Interdisciplinary",
+        "value": "GSB General and Interdisciplinary",
+        "id": "GSBGEN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 26,
+        "sub_subject": "GSB Interdisciplinary",
+        "value": "GSB Interdisciplinary",
+        "id": "GSBGID",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 27,
+        "sub_subject": "Human Genetics",
+        "value": "Human Genetics",
+        "id": "HMN GENE",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 28,
+        "sub_subject": "Human Resource Management",
+        "value": "Human Resource Management",
+        "id": "HRMGT",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 29,
+        "sub_subject": "Health Research and Policy",
+        "value": "Health Research and Policy",
+        "id": "HRP",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 30,
+        "sub_subject": "Immunology",
+        "value": "Immunology",
+        "id": "IMMUNOL",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 31,
+        "sub_subject": "Medicine Interdisciplinary",
+        "value": "Medicine Interdisciplinary",
+        "id": "INDE",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 32,
+        "sub_subject": "Law",
+        "value": "Law",
+        "id": "LAW",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 33,
+        "sub_subject": "LAW GENERAL",
+        "value": "LAW GENERAL",
+        "id": "LAWGEN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 34,
+        "sub_subject": "Lifeworks",
+        "value": "Lifeworks",
+        "id": "LIFE",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 35,
+        "sub_subject": "Molecular and Cellular Physiology",
+        "value": "Molecular and Cellular Physiology",
+        "id": "MCP",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 36,
+        "sub_subject": "Medicine",
+        "value": "Medicine",
+        "id": "MED",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 37,
+        "sub_subject": "Economic Analysis and Policy",
+        "value": "Economic Analysis and Policy",
+        "id": "MGTECON",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 38,
+        "sub_subject": "Microbiology and Immunology",
+        "value": "Microbiology and Immunology",
+        "id": "MI",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 39,
+        "sub_subject": "Marketing",
+        "value": "Marketing",
+        "id": "MKTG",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 40,
+        "sub_subject": "Neurobiology",
+        "value": "Neurobiology",
+        "id": "NBIO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 41,
+        "sub_subject": "Neurology and Neurological Sciences",
+        "value": "Neurology and Neurological Sciences",
+        "id": "NENS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 42,
+        "sub_subject": "Neurosciences Program",
+        "value": "Neurosciences Program",
+        "id": "NEPR",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 43,
+        "sub_subject": "Neurosurgery",
+        "value": "Neurosurgery",
+        "id": "NSUR",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 44,
+        "sub_subject": "Organizational Behavior",
+        "value": "Organizational Behavior",
+        "id": "OB",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 45,
+        "sub_subject": "Obstetrics and Gynecology",
+        "value": "Obstetrics and Gynecology",
+        "id": "OBGYN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 46,
+        "sub_subject": "Operations Information and Technology",
+        "value": "Operations Information and Technology",
+        "id": "OIT",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 47,
+        "sub_subject": "Ophthalmology",
+        "value": "Ophthalmology",
+        "id": "OPHT",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 48,
+        "sub_subject": "Orthopaedic Surgery",
+        "value": "Orthopaedic Surgery",
+        "id": "ORTHO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 49,
+        "sub_subject": "Otolaryngology",
+        "value": "Otolaryngology",
+        "id": "OTOHNS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 50,
+        "sub_subject": "Physician Assistant Studies",
+        "value": "Physician Assistant Studies",
+        "id": "PAS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 51,
+        "sub_subject": "Pathology",
+        "value": "Pathology",
+        "id": "PATH",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 52,
+        "sub_subject": "Pediatrics",
+        "value": "Pediatrics",
+        "id": "PEDS",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 53,
+        "sub_subject": "Political Economics",
+        "value": "Political Economics",
+        "id": "POLECON",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 54,
+        "sub_subject": "Psychiatry",
+        "value": "Psychiatry",
+        "id": "PSYC",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 55,
+        "sub_subject": "Radiology",
+        "value": "Radiology",
+        "id": "RAD",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 56,
+        "sub_subject": "Radiation Oncology",
+        "value": "Radiation Oncology",
+        "id": "RADO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 57,
+        "sub_subject": "Structural Biology",
+        "value": "Structural Biology",
+        "id": "SBIO",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 58,
+        "sub_subject": "School of Medicine General",
+        "value": "School of Medicine General",
+        "id": "SOMGEN",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 59,
+        "sub_subject": "Stem Cell Biology and Regenerative Medicine",
+        "value": "Stem Cell Biology and Regenerative Medicine",
+        "id": "STEMREM",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 60,
+        "sub_subject": "Strategic Management",
+        "value": "Strategic Management",
+        "id": "STRAMGT",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 61,
+        "sub_subject": "Surgery",
+        "value": "Surgery",
+        "id": "SURG",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      },
+      {
+        "key": 62,
+        "sub_subject": "Urology",
+        "value": "Urology",
+        "id": "UROL",
+        "subjectName": "Professional",
+        "subjectId": "MMPROF"
+      }
+    ]
+ 
+  ,
+    "sub_subjects_social_sciences": [
+      {
+        "key": 1,
+        "sub_subject": "Anthropology",
+        "value": "Anthropology",
+        "id": "ANTHRO",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 2,
+        "sub_subject": "Archaeology",
+        "value": "Archaeology",
+        "id": "ARCHLGY",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 3,
+        "sub_subject": "Chicana/o - Latina/o Studies",
+        "value": "Chicana/o - Latina/o Studies",
+        "id": "CHILATST",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 4,
+        "sub_subject": "Civic, Liberal, and Global Education",
+        "value": "Civic, Liberal, and Global Education",
+        "id": "COLLEGE",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 5,
+        "sub_subject": "Communication",
+        "value": "Communication",
+        "id": "COMM",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 6,
+        "sub_subject": "Democracy, Development and the Rule of Law",
+        "value": "Democracy, Development and the Rule of Law",
+        "id": "DDRL",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 7,
+        "sub_subject": "East Asian Studies",
+        "value": "East Asian Studies",
+        "id": "EASTASN",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 8,
+        "sub_subject": "Economics",
+        "value": "Economics",
+        "id": "ECON",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 9,
+        "sub_subject": "Global Studies",
+        "value": "Global Studies",
+        "id": "GLOBAL",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 10,
+        "sub_subject": "Human Rights",
+        "value": "Human Rights",
+        "id": "HUMRTS",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 11,
+        "sub_subject": "International Security Studies",
+        "value": "International Security Studies",
+        "id": "IIS",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 12,
+        "sub_subject": "International Policy",
+        "value": "International Policy",
+        "id": "INTLPOL",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 13,
+        "sub_subject": "International Relations",
+        "value": "International Relations",
+        "id": "INTNLREL",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 14,
+        "sub_subject": "Islamic Studies",
+        "value": "Islamic Studies",
+        "id": "ISLAMST",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 15,
+        "sub_subject": "Political Science",
+        "value": "Political Science",
+        "id": "POLISCI",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 16,
+        "sub_subject": "Psychology",
+        "value": "Psychology",
+        "id": "PSYCH",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 17,
+        "sub_subject": "Public Policy",
+        "value": "Public Policy",
+        "id": "PUBLPOL",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 18,
+        "sub_subject": "Russian, East European and Eurasian Studies",
+        "value": "Russian, East European and Eurasian Studies",
+        "id": "REES",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 19,
+        "sub_subject": "Sociology",
+        "value": "Sociology",
+        "id": "SOC",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 20,
+        "sub_subject": "Science, Technology, and Society",
+        "value": "Science, Technology, and Society",
+        "id": "STS",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 21,
+        "sub_subject": "Symbolic Systems",
+        "value": "Symbolic Systems",
+        "id": "SYMSYS",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      },
+      {
+        "key": 22,
+        "sub_subject": "Urban Studies",
+        "value": "Urban Studies",
+        "id": "URBANST",
+        "subjectName": "Social Sciences",
+        "subjectId": "MMSOCSCI"
+      }
+    ]
+  ,
+  "sub_subjects": [
+    {
+      "key": 1,
+      "sub_subject": "American Studies (20)",
+      "value":"American Studies"
+    },
+    {
+      "key": 2,
+      "sub_subject": "Art History (23)",
+      "value":"Art History"
+    },
+    {
+      "key": 3,
+      "sub_subject": "Art Practice (12)",
+      "value":"Art Practice"
+    },
+    {
+      "key": 4,
+      "sub_subject": "Film and Media Studies (9)",
+      "value":"Film and Media Studies"
+    },
+    {
+      "key": 5,
+      "sub_subject": "Film Production (7)",
+      "value":"Film Production"
+    },
+    {
+      "key": 6,
+      "sub_subject": "Classics (11)",
+      "value":"Classics"
+    },
+    {
+      "key": 7,
+      "sub_subject": "Comparative Literature (9)",
+      "value":"Comparative Literature"
+    },
+    {
+      "key": 8,
+      "sub_subject": "English (10)",
+      "value":"English"
+    },
+    {
+      "key": 9,
+      "sub_subject": "Ethics in Society (7)",
+      "value":"Ethics in Society"
+    },
+    {
+      "key": 10,
+      "sub_subject": "History (8)",
+      "value":"History"
+    },
+    {
+      "key": 11,
+      "sub_subject": "History and Philosophy of Science (9)",
+      "value":"History and Philosophy of Science"
+    },
+    {
+      "key": 12,
+      "sub_subject": "H&S Division of Literatures, Cultures, & Languages (11)",
+      "value":"H&S Division of Literatures, Cultures, & Languages"
+    },
+    {
+      "key": 13,
+      "sub_subject": "Interdisciplinary Studies in Humanities (8)",
+      "value":"Interdisciplinary Studies in Humanities"
+    },
+    {
+      "key": 14,
+      "sub_subject": "Linguistics (6)",
+      "value":"Linguistics"
+    },
+    {
+      "key": 15,
+      "sub_subject": "MLA Program (9)",
+      "value":"MLA Program"
+    },
+    {
+      "key": 16,
+      "sub_subject": "Modern Thought and Literature (3)",
+      "value":"Modern Thought and Literature"
+    },
+    {
+      "key": 17,
+      "sub_subject": "Music (5)",
+      "value":"Music"
+    },
+    {
+      "key": 18,
+      "sub_subject": "Philosophy (6)",
+      "value":"Philosophy"
+    },
+    {
+      "key": 19,
+      "sub_subject": "Program in Writing and Rhetoric (7)",
+      "value":"Program in Writing and Rhetoric"
+    },
+    {
+      "key": 20,
+      "sub_subject": "School of Humanities & Sciences (6)",
+      "value":"School of Humanities & Sciences"
+    },
+    {
+      "key": 21,
+      "sub_subject": "Structured Liberal Education (7)",
+      "value":"Structured Liberal Education"
+    },
+    {
+      "key": 22,
+      "sub_subject": "Dance (8)",
+      "value":"Dance"
+    },
+    {
+      "key": 23,
+      "sub_subject": "Drama (12)",
+      "value":"Drama"
+    },
+    {
+      "key": 24,
+      "sub_subject": "Teaching and Learning (4)",
+      "value":"Teaching and Learning"
+    },
+    {
+      "key": 25,
+      "sub_subject": "Thinking Matters (3)",
+      "value":"Thinking Matters"
+    },
+    {
+      "key": 26,
+      "sub_subject": "Civic, Liberal, and Global Education (1)",
+      "value":"Civic, Liberal, and Global Education"
+    },
+    {
+      "key": 27,
+      "sub_subject": "Center for Teaching and Learning (2)",
+      "value":"Center for Teaching and Learning"
+    },
+    {
+      "key": 28,
+      "sub_subject": "Education as Self-Fashioning (4)",
+      "value":"Education as Self-Fashioning"
+    },
+    {
+      "key": 29,
+      "sub_subject": "Immersion in the Arts (8)",
+      "value":"Immersion in the Arts"
+    },
+    {
+      "key": 30,
+      "sub_subject": "Oral Communications (4)",
+      "value":"Oral Communications"
+    },
+    {
+      "key": 31,
+      "sub_subject": "Residential Programs (8)",
+      "value":"Residential Programs"
+    },
+    {
+      "key": 32,
+      "sub_subject": "Undergraduate Advising and Research (9)",
+      "value":"Undergraduate Advising and Research"
+    }
+  ]
+}

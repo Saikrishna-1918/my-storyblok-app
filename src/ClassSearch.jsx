@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef, isValidElement, cloneElement } from
 import { Row, Col, Checkbox, Modal, Button, Input, Slider, Tooltip } from "antd";
 import filter_data from "./AllclassesList.json";
 import "./Allclasseslist.css";
-import "./myclasses.css";
+import "./myclasses.module.css";
 import "./classsearch.css";
 import { UserAuth } from "./ContextApi/ContextApi";
 import {
@@ -21,12 +21,11 @@ import CalendarEventWrapper from "./CalendarEventWrapper";
 import AllClassCalendarToolBar from "./AllClassCalendarToolBar";
 import CustomEachEventWrapper from "./CustomEachEventWrapper";
 import DayViewEventsData from "./DayViewEventsData";
+import ClassSearchHeader from "./ClassSearchHeader";
 
 
 const ClassSearch = () => {
-    const [blok, setBlok] = useState(null);
-    const storyblokApi = getStoryblokApi();
-    console.log('searchblok,', blok);
+
     const [isTooltip, setIsToolTip] = useState("");
     const [isWidthLessThan768, setIsWidthLessThan768] = useState(
         window.innerWidth < 992
@@ -121,6 +120,8 @@ const ClassSearch = () => {
     } = UserAuth();
 
     const instructorData = contextData?.instructorData;
+    const myClassApiData = contextData?.myClassApiData;
+
     const myclassesFilteredDataEnroll = contextData?.myclassesFilteredDataEnroll;
     const myClassesPlannedData = contextData?.myClassesPlannedData;
     const myScheduleFilteredData = contextData?.myScheduleFilteredData;
@@ -216,6 +217,7 @@ const ClassSearch = () => {
     const gradingBasisFilter = contextData?.gradingBasisFilter;
     const isChildChecked = contextData?.isChildChecked;
     const getLocationCount = contextData?.getLocationCount;
+    const blok=contextData?.blok;
     const sliderRef = useRef(null);
 
     useEffect(() => {
@@ -610,20 +612,7 @@ const ClassSearch = () => {
             return newState;
         });
     };
-    useEffect(() => {
-        storyblokApi
-            .get("cdn/stories/home", { version: "published" })
-            .then(({ data }) => {
-                const body = data?.story?.content?.body || [];
 
-                const classSearchBlock = body.find(
-                    (b) => b.component === "ClassSearch"
-                );
-
-                setBlok(classSearchBlock || null);
-            })
-            .catch((err) => console.error(err));
-    }, [storyblokApi]);
 
     const toolNumeberOfUntisTipRef = useRef(null);
     useEffect(() => {
@@ -814,7 +803,7 @@ const ClassSearch = () => {
                             width: "100%",
                             borderRadius: "0.6295907660020986vh 0.3125vw 0 0",
                             // boxShadow: "0px 0px 0.4197271773347324vh 0px #00000040",
-                            padding: "10px 1.4vw 10px 0.78125vw",
+                            // padding: "10px 1.4vw 10px 0.78125vw",
                             cursor: "pointer",
                         }}
                         onClick={() => {
@@ -4463,16 +4452,10 @@ const ClassSearch = () => {
                     )}
                 </div>
 
-                {/* RIGHT CONTENT */}
-                <div >
-                    <div className="classSearchContent">
-                        <h1 className="classSearchTitle">{blok?.Title}</h1>
-                        <p className="classSearchDesc">
-                            {classdescription?.Title}
-                        </p>
-
-                    </div>
-                </div>
+                <ClassSearchHeader
+                    title={blok?.Title}
+                    description={classdescription?.Title}
+                />
 
             </div>
         </div>

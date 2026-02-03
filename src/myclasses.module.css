@@ -1,0 +1,2030 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;600;700&display=swap");
+
+
+.myclassesFont {
+  font-size: 51px;
+  font-weight: 700;
+  font-family: Source Serif Pro ;
+  line-height: 56.1px;
+  color: #272e5c;
+  text-align: center;
+}
+.modal {
+  z-index: 1050;
+}
+.modal-backdrop {
+  z-index: 1040;
+}
+.modal.show {
+  display: block !important;
+}
+.modal-backdrop {
+  opacity: 0.5; /* Adjust as needed */
+  display: block !important;
+}
+.customButton {
+  background-color: #620059 !important ;
+  border-color: #0d6efd !important;
+}
+.customButtonFinish {
+  background-color: #620059 !important;
+  border-color: #0d6efd !important;
+}
+/* .ant-select-single .ant-select-selector .ant-select-selection-item {
+line-height: 18px !important;
+} */
+:global(.ant-select-focused) {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+.customButtonFinish:hover {
+  background-color: #620059 !important;
+  border-color: #0d6efd !important;
+}
+.customButton:hover {
+  background-color: #620059 !important;
+  border-color: #0d6efd !important;
+}
+.customButton:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+.customButtonFinish:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+.closeButton:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+/* .customButton:focus,
+  .customButton:active {
+    box-shadow: none !important;
+    background-color: #620059 !important; 
+    border-color: #007bff !important;
+  } */
+
+/* Common Classes  */
+.colorAqua {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+}
+.fontSizeNormal {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.collPara {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.fontSize2 {
+  font-size: 16px;
+}
+.btn {
+  height: 42px;
+  width: 130px;
+  padding: 10px 16px;
+  border: none;
+  /* outline: none; */
+  border-radius: 6px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 700;
+  background-color: inherit;
+  margin: 10px 0px;
+  margin-left: 15px;
+}
+.btn:active {
+  transform: scale(1.03);
+}
+
+.btn:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+.buttonPrimary:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+
+.linkBtn {
+  height: 43px;
+  /* margin-left: 15px; */
+  width: auto;
+  /* padding: 0px 2px; */
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+}
+.linkBtn:hover {
+  color: var(--primaryPlumColor);
+}
+.linkBtn:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+#outerDiv {
+  width: inherit;
+  height: auto;
+  position: relative;
+  padding: 0px 0px 0px 6px;
+}
+#innerDiv {
+  height: auto;
+  display: flex;
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+#leftDiv {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+}
+#leftDiv h3 {
+  font-size: 18px;
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+}
+#leftDiv p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.5px;
+  text-align: center;
+  color: var(--darkBlueColor);
+}
+#rightDiv {
+  min-height: 100%;
+  height: auto;
+  border-left: 1px solid var(--primaryLightGrayColor);
+  padding: -1 0 0 30px;
+  position: relative;
+}
+#rightDiv h4 {
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--primaryBlue);
+  line-height: 25.2px;
+  font-family: sans-serif;
+  word-wrap: break-word;
+}
+#seasonAndStatusDisplayDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+#winter {
+  top: 0px;
+  color: var(--primaryBlue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+}
+#open {
+  color: var(--primaryGreen);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+}
+#withdrawnORDropped {
+  color: var(--primaryGrayColor);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+  text-align: right;
+}
+#closed {
+  color: var(--primaryRedColor);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+}
+#waitlist {
+  color: var(--primaryOrangeColor);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+}
+#planned {
+  right: 0px;
+  top: 28px;
+  color: var(--primaryGrayColor);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+}
+#iconDiv {
+  height: auto;
+  width: auto;
+}
+#leftIconDiv div {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+#leftIconDiv div span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 5px;
+  color: var(--primaryBlue);
+}
+
+.locationCss {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 5px;
+  color: var(--primaryBlue);
+}
+
+.locationCss:hover {
+  color: #2F6FDB !important;
+}
+
+ 
+
+/* inside your module.css */
+:global(a.listCard_locationCss__bJ80c:hover),
+:global(a.listCard_locationCss__bJ80c:focus) {
+  color: #0d6efd !important;
+}
+
+/* .locationCss:hover {
+  color: inherit;           
+  text-decoration: none;      
+} */
+
+.locationCss #rightIconDiv div span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 1px;
+  color: var(--primaryBlue);
+}
+#rightIconDiv div > span:first-child {
+  color: var(--subCategoryColor);
+}
+#calenderIcon {
+  font-size: 1.1rem;
+  color: var(--subCategoryColor);
+  font-weight: 800;
+}
+#clockIcon {
+  font-size: 1.1rem;
+  color: var(--subCategoryColor);
+  font-weight: 800;
+}
+#locationIcon {
+  font-size: 1.3rem;
+  color: var(--subCategoryColor);
+  font-weight: 800;
+}
+#collapseBtn {
+  border: 0.5px solid var(--secondaryBlue);
+  height: 37px;
+  width: 157px;
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+  background-color: inherit;
+  border-radius: 6px;
+  padding: 8px, 6px, 8px, 10px;
+  gap: 5px;
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+#collapseBody {
+  height: auto;
+  width: 100%;
+}
+#collapseOuterDiv {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: auto;
+  width: 100%;
+  padding: 40px 10px 69px 20px;
+  /* padding-left: 30px; */
+  justify-content: space-around;
+  /* padding-bottom: 69px; */
+  margin: -10px 0 20px 0;
+}
+.PlannedShowandRemove {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.PlannedShowandRemoveInnerDiv {
+  display: flex;
+  align-items: center;
+}
+.planEnrollClassFirstFooter button:last-child.disabled {
+  background-color: var(--lightGrayColor);
+  color: #adb5bd !important;
+  cursor: not-allowed;
+}
+
+.ClassSearchShowandRemove {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px 15px 0;
+  margin: 4px;
+  box-sizing: border-box;
+}
+.ClassSearchShowandRemoveInnerDiv {
+  display: flex;
+  align-items: center;
+}
+.collapseOuterDivFooter {
+  min-height: 60px;
+  height: auto;
+  width: 89.1%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 0 10px 0;
+}
+#firstDiv {
+  width: 62%;
+  height: auto;
+}
+.collapseHeadDiv {
+  /* height: 45px; */
+  /* width: inherit; */
+}
+.collapseHeadDiv span {
+  color: var(--subCategoryColor);
+}
+.defaultOptionNext {
+  background-color: var(--lightGrayColor);
+  color: #adb5bd;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.selectedOptionNext {
+  background-color: var(--persian_plum);
+  color: var(--lightColor);
+  cursor: pointer;
+  opacity: 1;
+}
+
+#conflictTextclassDiv {
+  line-height: 20px;
+  font-size: 16px;
+  color: var(--primaryRedColor);
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+#classDiv {
+  line-height: 20px;
+  font-size: 16px;
+  color: var(--skyDarkColor);
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+#deptAnth {
+  color: var(--primaryBlue);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  margin: 1px;
+}
+#descDiv {
+  height: auto;
+  width: 100%;
+  margin: 22px 0px -4px;
+}
+#classAppDiv {
+  height: auto;
+  width: 100%;
+  margin: 22px 0px -4px;
+}
+#classAppDiv h5 {
+  color: var(--primaryBlue);
+  line-height: 21.5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#classAppDiv button {
+  height: 42px;
+  width: 130px;
+  border-radius: 6px;
+  margin-right: 15px;
+  color: white;
+  background-color: var(--subCategoryColor);
+  border: 1px solid #007c92 ;
+  font-weight: 700;
+}
+#classAppDiv > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+
+  .applyNowBtn{
+    font-size: 16px;
+  }
+
+  .applyNowBtn>a{
+    text-decoration: none !important;
+  }
+
+  .applyNowBtn:hover>a{
+    text-decoration: underline !important;
+  }
+}
+#classAppDiv span {
+  color: var(--primaryBlue)
+}
+#courseDiv {
+  height: auto;
+  width: 100%;
+  margin: 22px 0px -4px;
+}
+#courseDiv h5 {
+  color: var(--primaryBlue);
+  line-height: 21.5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#courseDiv > div {
+  display: flex;
+  gap: 4px;
+}
+#courseDiv span {
+  color: var(--subCategoryColor);
+}
+#strtEndDiv {
+  height: auto;
+  width: 100%;
+  margin: 22px 0px;
+}
+#strtEndDiv h4 {
+  color: var(--primaryBlue);
+  line-height: 21.5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#strtEndDiv p {
+  line-height: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primaryBlue);
+  text-align: justify;
+}
+
+#descDiv h5 {
+  color: var(--primaryBlue);
+  line-height: 21.5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#descDiv p {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primaryBlue);
+  text-align: justify;
+}
+.classDesc{
+   line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primaryBlue);
+  text-align: justify;
+}
+#enrollmentDiv {
+  width: 100%;
+  height: auto;
+  margin: 24px 0px -4px;
+}
+#enrollmentDiv h5 {
+  color: var(--primaryBlue);
+  line-height: 21.6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#enrollmentStatus {
+  height: auto;
+  width: 252px;
+  display: flex;
+  flex-direction: column;
+}
+#enrollmentStatus p {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+#enrollmentStatus > div {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+}
+#leftEnrollmentDiv {
+  display: flex;
+  flex-direction: column;
+}
+#leftEnrollmentDiv p {
+  margin: 4px 0px;
+}
+#rightEnrollmentDiv {
+  display: flex;
+  flex-direction: column;
+}
+#rightEnrollmentDiv p {
+  margin: 4px 0px;
+}
+#enrollmentStatus p > span {
+  color: var(--subCategoryColor);
+}
+#tableDiv {
+  /* min-height: 208px; */
+  height: auto;
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+#tableDiv h4 {
+  color: var(--primaryBlue);
+  line-height: 21.6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+#tableDiv p span:first-child {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+}
+#courseEnrollTable {
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+#courseEnrollTable tr {
+  border-bottom: 1pt solid var(--primaryLightGrayColor);
+  padding: 10px !important;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+#courseEnrollTable th {
+  background-color: var(--secondaryBlue);
+  color: var(--lightColor);
+  font-weight: 700;
+  border-right: 1px solid var(--lightGrayColor);
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 10px 10px 22px;
+}
+#enrollReview {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  font-size: medium;
+  border-radius: 7px;
+  color: #090806;
+}
+.firstHead {
+  padding: 15px 10px 15px 20px;
+  text-align: left;
+  margin: 10px;
+}
+#courseEnrollTable td {
+  color: var(--primaryBlue);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 10px 10px 10px 10px;
+}
+.firstCol {
+  text-align: left;
+  padding: 10px 10px 10px 20px;
+  word-wrap: break-word;
+  width: 243px;
+}
+#notesDiv {
+  height: auto;
+  margin-bottom: 8px;
+}
+#notesDiv h5 {
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+  color: var(--primaryBlue);
+}
+#notesDiv p {
+  color: var(--primaryBlue);
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: justify;
+  word-wrap: break-word;
+}
+#rulesAndReq {
+  min-height: 133px;
+  height: auto;
+  width: 100%;
+}
+#rulesAndReq h5 {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+#rulesAndRequirementsDiv div span {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+}
+#rulesAndRequirementsDiv div span:first-child {
+  color: var(--skyDarkColor);
+}
+
+/* #departmentLink:focus {
+  outline: 2px solid var(--secondaryBlue); 
+} */
+
+#departmentLink:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+
+#showBtn {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+
+  width: 135px;
+  border: 0.5px solid var(--secondaryBlue);
+  border-radius: 6px;
+  font-size: 15px;
+  line-height: 18px;
+  text-decoration: none;
+  font-weight: 400;
+  background-color: inherit;
+  padding: 10px;
+  margin: 10px 0px;
+}
+#showBtn:active {
+  transform: scale(1.05);
+}
+#showBtn:focus {
+  outline: none !important;
+}
+
+#showBtn:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+
+.instructorLink:focus-visible {
+  outline: 3px solid #2F6FDB !important;
+}
+.locationCss:focus-visible {
+  outline: 3px solid #2F6FDB !important;
+}
+
+:where(.css-1v28nim) a:hover {
+  color: #0958d9 !important;
+}
+
+/* ============================ */
+#secondDiv {
+  height: auto;
+  padding: 12px 0px;
+  padding-left: 3%;
+}
+.secondInnerDiv {
+  height: auto;
+  /* max-width: 217px; */
+  width: auto;
+  word-break: keep-all;
+}
+.toolTip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.secondInnerDiv h5 {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 700;
+  color: var(--primaryBlue);
+}
+.secondInnerDiv h4 {
+  font-size: 18px;
+  line-height: 35px;
+  font-weight: 700;
+  color: var(--primaryBlue);
+}
+.secondInnerDiv p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primaryBlue);
+}
+#showMore {
+  color: var(--subCategoryColor);
+  text-decoration: underline;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+}
+.collCourseDesc {
+  text-align: justify;
+}
+#openSeats {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+}
+#planBtn {
+  color: var(--primaryPlumColor);
+  border: 1.5px solid var(--primaryPlumColor);
+}
+#disabledPlanBtn {
+  border: 1.5px solid var(--lightGrayColor);
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+#disabledEnrollBtn {
+  background-color: var(--lightGrayColor);
+  color: var(--lightColor);
+  cursor: not-allowed;
+}
+#withdrawBtn {
+  color: var(--lightColor);
+  border: 1.5px solid var(--primaryPlumColor);
+  background-color: var(--primaryPlumColor);
+}
+
+#RemoveBtn {
+  color: var(--primaryPlumColor);
+  border: 1.5px solid var(--primaryPlumColor);
+  background-color: white;
+}
+
+#enrollBtn {
+  color: var(--lightColor);
+  background-color: var(--primaryPlumColor);
+}
+#modalOuterDiv {
+  height: 420px;
+  width: 600px;
+  padding: 0px 30px;
+  position: relative;
+}
+#modalHeader {
+  border-bottom: none;
+}
+#modalInnerDiv {
+  width: 96%;
+  height: 90%;
+}
+#modalInnerDiv h4 {
+  margin-bottom: 30px;
+  color: var(--primaryBlue);
+  margin-left: 0px;
+}
+#modalInnerDiv > div {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 16px;
+}
+#modalInnerDiv div p {
+  font-size: 1.2rem;
+  color: var(--primaryBlue);
+  font-weight: 400;
+}
+#closeBtn {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  outline: none;
+  height: 30px;
+  width: 30px;
+  font-size: 1.4rem;
+  border: none;
+}
+/* plan a class  */
+.planEnrollClassFirst {
+  width: 515px;
+  height: 281px;
+}
+.planEnrollClassFirst h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+.planEnrollClassFirstBody {
+  /* height: 108px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 40px;
+}
+.planEnrollClassFirstBody p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+.toggleBtnDivFirst {
+  height: 47px;
+  width: 244px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.toggleBtnDivFirst ul {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  padding-left: 0px;
+  border-radius: 9px;
+}
+.toggleBtnDivFirst ul li {
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.toggleBtnDivFirst ul li:first-child {
+  border-radius: 6px 0px 0px 6px;
+  border: 2px solid var(--skyDarkColor);
+}
+.toggleBtnDivFirst ul li:last-child {
+  border-radius: 0px 6px 6px 0px;
+  border: 2px solid var(--skyDarkColor);
+}
+#oneListCareer {
+  border-radius: 8px;
+  padding: 0px 20px;
+}
+.toggleBtnDivFirst ul li label {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0 10px 0 10px;
+}
+.radioBtn input[type="radio"] {
+  display: none;
+}
+
+/********************** Radio button css start *************************/
+
+.radioGroup {
+  display: flex;
+  border: 3px solid var(--subCategoryColor);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 80%;
+}
+
+.radioGroup .hiddenRadio {
+  display: none;
+}
+
+.radioGroup .toggleOption {
+  flex: 1;
+  padding: 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: white;
+  color: #003865;
+  transition: all 0.3s;
+  border: none;
+  align-items: center;
+}
+
+.radioGroup .toggleOption:first-of-type {
+  border-right: 3px solid var(--subCategoryColor);
+  border-radius: 3px 0 0 3px;
+  align-items: center;
+}
+
+.radioGroup.showLast .toggleOption:last-of-type {
+  border-left: 3px solid var(--subCategoryColor);
+  border-radius: 0 3px 3px 0;
+}
+
+.radioGroup .selected {
+  background-color: var(--subCategoryColor);
+  color: var(--lightColor);
+}
+
+.radioGroup .unselected {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+/********************** Radio button css end *************************/
+
+/********************** Radio button css start plan a class career group *************************/
+
+.radioGroupCareerGroup {
+  display: flex;
+  border: 3px solid var(--subCategoryColor);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.radioGroupCareerGroup .hiddenRadio {
+  display: none;
+}
+
+.radioGroupCareerGroup .toggleOption {
+  flex: 1;
+  padding: 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: white;
+  color: #003865;
+  transition: all 0.3s;
+  border: none;
+  align-items: center;
+}
+
+.radioGroupCareerGroup .toggleOption:first-of-type {
+  border-right: 3px solid var(--subCategoryColor);
+  border-radius: 10px 0 0 10px;
+  align-items: center;
+}
+
+.radioGroupCareerGroup .toggleOption:last-of-type {
+  border-radius: 0 10px 10px 0;
+}
+
+.radioGroupCareerGroup .selected {
+  background-color: var(--subCategoryColor);
+  color: var(--lightColor);
+}
+
+.radioGroupCareerGroup .unselected {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+/********************** Radio button css end *************************/
+
+/********************** Radio button css start for plan a class grading basis *************************/
+
+.radioGroupPlanGrading {
+  display: flex;
+  border: 3px solid var(--subCategoryColor);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.radioGroupPlanGrading .hiddenRadio {
+  display: none;
+}
+
+.radioGroupPlanGrading .toggleOption {
+  flex: 1;
+  padding: 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: white;
+  color: #003865;
+  transition: all 0.3s;
+  border: none;
+  align-items: center;
+}
+
+.radioGroupPlanGrading .toggleOption:first-of-type {
+  border-right: 3px solid var(--subCategoryColor);
+  border-radius: 3px 0 0 3px;
+  align-items: center;
+}
+
+.radioGroupPlanGrading.showLast .toggleOption:last-of-type {
+  border-left: 3px solid var(--subCategoryColor);
+  border-radius: 0 3px 3px 0;
+}
+
+.radioGroupPlanGrading .selected {
+  background-color: var(--subCategoryColor);
+  color: var(--lightColor);
+}
+
+.radioGroupPlanGrading .unselected {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+/********************** Radio button css end *************************/
+
+/********************** Radio button css start for enroll a class grading basis *************************/
+
+.radioGroupEnrollGrading {
+  display: flex;
+  border: 3px solid var(--subCategoryColor);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 70%;
+}
+
+.radioGroupEnrollGrading .hiddenRadio {
+  display: none;
+}
+
+.radioGroupEnrollGrading .toggleOption {
+  flex: 1;
+  padding: 10px 16px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: white;
+  color: #003865;
+  transition: all 0.3s;
+  border: none;
+  align-items: center;
+}
+
+.radioGroupEnrollGrading .toggleOption:first-of-type {
+  border-right: 3px solid var(--subCategoryColor);
+  border-radius: 3px 0 0 3px;
+  align-items: center;
+}
+
+.radioGroupEnrollGrading.showLast .toggleOption:last-of-type {
+  border-left: 3px solid var(--subCategoryColor);
+  border-radius: 0 3px 3px 0;
+}
+
+.radioGroupEnrollGrading .selected {
+  background-color: var(--subCategoryColor);
+  color: var(--lightColor);
+}
+
+.radioGroupEnrollGrading .unselected {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+/********************** Radio button css end *************************/
+
+.planEnrollClassFirstFooter {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.planEnrollClassFirstFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+}
+.planEnrollClassFirstFooter button:active {
+  transform: scale(1.03);
+}
+.planEnrollClassFirstFooter button:first-child {
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  border: 1px solid var(--primaryPlumColor);
+}
+.planEnrollClassFirstFooter button:last-child {
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+/* plan class Second  */
+#planClassSecond {
+  width: 700px;
+  height: auto;
+}
+.planEnrollClassSecond h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+.planEnrollClassSecondBody {
+  padding: 0px;
+}
+.planEnrollClassSecondBodyFirstDiv {
+  height: 128px;
+  width: inherit;
+  padding: 6px 36px;
+}
+.planEnrollClassSecondBodyFirstDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  /* line-height: 50px; */
+  font-weight: 700;
+}
+.toggleBtnDivSecond {
+  height: 47px;
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+}
+/* .toggleBtnDivSecond ul {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  padding-left: 0px;
+  border: 2px solid var(--skyDarkColor);
+  border-radius: 9px;
+  margin-top: 10px;
+} */
+/* .toggleBtnDivSecond ul li {
+  display: inline-block;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* .toggleBtnDivSecond ul li:first-child {
+  border-radius: 6px 0px 0px 6px;
+  border: 1px solid var(--skyDarkColor);
+}
+.toggleBtnDivSecond ul li:last-child {
+  border-radius: 0px 6px 6px 0px;
+  border: 1px solid var(--skyDarkColor);
+} */
+/* .toggleBtnDivSecond ul li label {
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 0 10px 0 10px;
+} */
+.gradingActive {
+  background-color: var(--skyDarkColor);
+  color: var(--lightColor);
+}
+.gradingInactive {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+.planEnrollClassSecondBodySecondDiv {
+  height: 121px;
+  padding: 24px 36px;
+}
+.planEnrollClassSecondBodySecondDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+.numUnits {
+  height: 36px;
+  width: 118px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.numUnits img {
+  cursor: pointer;
+}
+.numUnits img.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.numUnits div {
+  height: inherit;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.numUnits div span {
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 600;
+  color: var(--primaryBlue);
+}
+.associateClass select {
+  height: 48px;
+  width: 387px;
+  border: 1px solid var(--secondaryLightBlack);
+  outline: none;
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 22.5px;
+  font-weight: 400;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+.associateClass select:focus-visible {
+  outline: 3px solid rgb(71, 61, 79);
+}
+.associateClass select option {
+  padding: 30px;
+}
+.planEnrollClassSecondBodyThirdDiv {
+  height: 100px;
+  padding: 5px 36px;
+}
+.planEnrollClassSecondBodyThirdDiv {
+  margin: 16px 0;
+}
+.customDropdown .ant-select-item-option-content {
+  display: flex;
+  flex-direction: column;
+}
+.optionContent {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 0;
+  line-height: 22px !important;
+}
+.classNbr {
+  font-size: 16px;
+  font-weight: 400;
+}
+.classNbr.black {
+  color: #272e5c;
+}
+.instructorName,
+.schedule {
+  color: #333;
+  font-size: 14px;
+}
+.seatsRemaining {
+  color: #0c6879;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px !important;
+}
+.customSelectAssociatedClass {
+  height: 48px;
+  width: 387px;
+  border: 1px solid #979694;
+  border-radius: 6px;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected {
+  color: rgba(0, 0, 0, 0.88);
+  font-weight: 600;
+  background-color: #b8ddf8 !important;
+}
+.planEnrollClassSecondBodyThirdDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+.planEnrollClassSecondFooter {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+.planEnrollClassSecondFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+}
+.planEnrollClassSecondFooter button:active {
+  transform: scale(1.03);
+}
+.planEnrollClassSecondFooter button:first-child {
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  border: 1px solid var(--primaryPlumColor);
+}
+.planEnrollClassSecondFooter button:last-child {
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+.planEnrollClassSecondFooter button:last-child.disabled {
+  background-color: var(--lightGrayColor);
+  color: #adb5bd;
+  cursor: not-allowed;
+}
+.adjustRelatedSectionBodyThirdDiv {
+  height: 115px;
+  padding: 25px 36px 0 36px;
+}
+.adjustRelatedSectionBodyThirdDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 600;
+}
+.adjustRelatedSectionFooter {
+  /* height: 66px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.adjustRelatedSectionFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+}
+.adjustRelatedSectionFooter button:active {
+  transform: scale(1.03);
+}
+.adjustRelatedSectionFooter button:first-child {
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  border: 1px solid var(--primaryPlumColor);
+}
+.adjustRelatedSectionFooter button:last-child {
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+.adjustRelatedSection h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+.adjustRelatedSectionBody {
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+.adjustRelatedSectionBodyFirstDiv {
+  height: 128px;
+  width: inherit;
+  padding: 24px 36px;
+}
+.adjustRelatedSectionBodyFirstDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+.adjustRelatedSectionBodySecondDiv {
+  height: 121px;
+  padding: 24px 36px;
+}
+.adjustRelatedSectionBodySecondDiv p {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 21.5px;
+  font-weight: 700;
+}
+/* Third Plan  */
+.planEnrollClassThird {
+  width: 515px;
+  height: auto;
+}
+#planClassThird h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+#planClassThirdBody {
+  height: auto;
+  padding: 24px 16px 24px 36px;
+}
+/* #planClassThirdBody h4 {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+} */
+#reviewTheInfromation {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+#reviewInfo {
+  /* height: 106px; */
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#reviewInfo p {
+  font-size: 16px;
+  line-height: 17px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+#reviewInfo p span:first-child {
+  color: var(--skyDarkColor);
+}
+#panInfo {
+  height: auto;
+  width: 100%;
+  margin-bottom: 10px;
+  margin: 20px 0 0 0;
+}
+
+#panInfo h4 {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.havePermission {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+.swapWithEnroll {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+}
+#panInfo input {
+  height: 46px;
+  width: 100%;
+  border: 0.5px solid var(--secondaryLightBlack);
+  outline: none;
+  padding-left: 15px;
+  border-radius: 6px;
+  /* margin-top: 6px; */
+  margin-bottom: 0px;
+}
+#panInfo input:focus-visible {
+  outline: 3px solid rgb(71, 61, 79);
+}
+
+#panInfo input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+#planClassThirdFooter {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#planClassThirdFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+}
+#planClassThirdFooter button:active {
+  transform: scale(1.03);
+}
+#planClassThirdFooter button:first-child {
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  border: 1px solid var(--primaryPlumColor);
+}
+#planClassThirdFooter button:last-child {
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+.adjustVariableOption {
+  width: 515px;
+  height: 260px;
+}
+.adjustVariableOption h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+#adjustVariableOptionBody {
+  height: 24px;
+  padding: 18px 16px 24px 36px;
+  display: flex;
+  flex-direction: column;
+}
+#adjustVariableOptionBody h4 {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 10px;
+}
+#adjustVariableOptionFooter {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#adjustVariableOptionFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+}
+#adjustVariableOptionFooter button:active {
+  transform: scale(1.03);
+}
+#adjustVariableOptionFooter button:first-child {
+  background-color: var(--lightColor);
+  color: var(--primaryPlumColor);
+  border: 1px solid var(--primaryPlumColor);
+}
+#adjustVariableOptionFooter button:last-child {
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+/* plan class four  */
+.planClassFour {
+  width: 515px;
+}
+.planClassFour h1 {
+  color: var(--primaryBlue);
+  font-size: 21px;
+  font-weight: 25px;
+  font-weight: 700;
+}
+.planClassFourBody {
+  /* padding: 24px 36px; */
+  width: 100%;
+}
+.planClassFourBody h4 {
+  color: var(--primaryBlue);
+  font-size: 18px;
+  font-weight: 700;
+  /* line-height: 22px; */
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+.planClassFourBody p {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--primaryBlue);
+}
+.planClassFourBody p span a {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+}
+.planClassFourFooter {
+  height: 66px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.planClassFourFooter button {
+  height: 34px;
+  width: 186px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  border-radius: 6px;
+  background-color: var(--primaryPlumColor);
+  color: var(--lightColor);
+}
+.planClassFourFooter button:active {
+  transform: scale(1.03);
+}
+#successDiv {
+  height: auto;
+  /* width: 432px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 10px;
+  /* margin-bottom: 26px; */
+}
+#successDiv div {
+  height: 45px;
+  width: 45px;
+  border: 3px solid var(--digitalGreenColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#successDiv p {
+  color: var(--digitalGreenColor);
+  font-size: 16px;
+  font-weight: 600;
+  /* line-height: 21.5px; */
+  margin-bottom: 0px;
+}
+#ErrorDiv {
+  height: 100px;
+  /* width: 432px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 26px;
+}
+#ErrorDiv div {
+  height: 48px;
+  width: 48px;
+  /* border: 2px solid var(--digitalGreenColor); */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#ErrorDiv p {
+  color: var(--primaryRedColor);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.5px;
+  margin-bottom: 0px;
+}
+.careerActive {
+  background-color: var(--skyDarkColor);
+  color: var(--lightColor);
+}
+.careerInactive {
+  background-color: var(--lightColor);
+  color: var(--primaryBlue);
+}
+.planEnrollClassFive {
+  width: 515px;
+  height: 350px;
+}
+.planEnroolFiveDive {
+  color: rgb(3, 13, 15);
+  font-size: 20px;
+  line-height: 21.5px;
+  /* font-weight: 700; */
+  display: flex;
+  gap: 14px;
+  transform: scale(1px);
+}
+#enrollClassSecond {
+  height: 691px;
+  width: 515px;
+}
+#enrollClassSecondEnroll {
+  height: auto;
+  width: 900px;
+}
+#enrollClassSecondBody {
+  width: 515px;
+  height: auto;
+}
+#enrollClassSecondBodyFourDiv {
+  height: 154px;
+  width: inherit;
+}
+#enrollClassSecondBodyFourDiv h5 {
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+#enrollClassSecondBodyFourDiv h5 span:last-child {
+  /* color: var(--secondaryBlue); */
+  color: #016895;
+}
+#removePlanFirstBody p {
+  /* font-size: 17px; */
+  /* font-weight: 400; */
+  /* line-height: 21.5px; */
+  color: var(--primaryBlue);
+  text-align: center;
+}
+#removePlanFirst {
+  height: auto;
+}
+#removePlanedH {
+  font-weight: 400;
+  color: var(--primaryBlue);
+  font-size: 17px;
+  line-height: 21.5px;
+}
+#adjustCourseBody {
+  height: auto;
+  width: inherit;
+}
+#downArrowTime {
+  padding-left: 0px !important;
+  cursor: pointer;
+}
+#splitTimeDiv ul {
+  min-height: 160px;
+  width: 255px;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0px;
+  border-radius: 10px;
+}
+#splitTimeDiv ul > div {
+  min-height: auto;
+  width: 255px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#splitTimeDiv ul div > div {
+  display: flex;
+  padding: 5px 0px;
+  border-radius: 10px;
+}
+#splitTimeDiv ul div > div:hover {
+  cursor: default;
+}
+#firstSplitDiv {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+#secondSplitDiv p {
+  margin-bottom: 0px;
+}
+/* ********************** Responsive Design **************************** */
+@media only screen and (max-width: 1220px) {
+  #rightDiv h4 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+  #leftDiv p {
+    font-size: 18px;
+  }
+  #leftDiv h6 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #winter {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #open {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #waitlist {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  #leftIconDiv div span {
+    font-size: 15px;
+  }
+  #rightIconDiv div span {
+    font-size: 15px;
+  }
+  #descDiv h4,
+  #enrollmentDiv h2,
+  #notesDiv h2,
+  #rulesAndReq h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  #descDiv p,
+  #enrollmentDiv p,
+  #notesDiv p,
+  #rulesAndReq p {
+    font-size: 14px;
+  }
+  .secondInnerDiv h2 {
+    font-size: 16px;
+  }
+  .secondInnerDiv p {
+    font-size: 14px;
+  }
+  .fontSize2 {
+  font-size: 14px;
+}
+  .btn {
+    height: 32px;
+    width: 100px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    margin: 6px 0px;
+    margin-left: 15px;
+  }
+  .collapseOuterDivFooter {
+    bottom: 0px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  #leftDiv p {
+    font-size: 18px;
+  }
+  #classDiv {
+    margin-bottom: 5px;
+  }
+  #descDiv {
+    margin: 32px 0px 16px;
+  }
+  #secondDiv {
+    height: auto;
+    width: 30%;
+    padding: 12px 0px;
+    padding-left: 3%;
+  }
+  .secondInnerDiv {
+    height: auto;
+    max-width: 277px;
+    width: auto;
+    word-break: break-all;
+  }
+  .secondInnerDiv h2 {
+    font-size: 15px;
+    line-height: 25px;
+    font-weight: 700;
+    color: var(--primaryBlue);
+  }
+  .secondInnerDiv p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    color: var(--primaryBlue);
+    margin: 10px 0px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #leftDiv {
+    padding-left: 30px;
+  }
+  #rightDiv {
+    padding-left: 20px;
+  }
+  #collapseBtn {
+    margin-top: 12px;
+    height: 35px;
+    width: 137px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .planEnrollClassFirst {
+    min-height: 281px;
+    height: auto;
+  }
+  .planEnrollClassFirstFooter {
+    min-height: 66px;
+    height: auto;
+  }
+  #planClassSecond {
+    min-height: 507px;
+    height: auto;
+  }
+  #EnrollClassSecond {
+    min-height: 507px;
+    height: auto;
+  }
+  .associateClass select {
+    width: 90%;
+  }
+  .associateClass select option {
+    padding: 30px;
+  }
+  #planClassSecond {
+    width: 515px;
+    min-height: auto;
+  }
+  .planEnrollClassSecondFooter {
+    height: auto;
+  }
+  #planClassThirdFooter {
+    height: auto;
+  }
+  .planClassFour {
+    width: auto;
+  }
+  #successDiv {
+    width: auto;
+  }
+  #collapseOuterDiv {
+    padding: 20px 20px 60px 20px;
+  }
+  #collapseBtn {
+    margin-top: 12px;
+    height: 30px;
+    width: 157px;
+    font-size: 16px;
+    background-color: #651c32;
+    color: white;
+    border: none;
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  #rulesAndReq {
+    min-height: 150px;
+    height: auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 435px) {
+  #collapseOuterDiv {
+    padding: 20px 20px 60px 20px;
+    flex-direction: column;
+  }
+  #firstDiv {
+    width: 100%;
+  }
+  #secondDiv {
+    padding-left: 1%;
+    width: 100%;
+  }
+  #showBtn {
+    /* color: var(--secondaryBlue); */
+    color: #016895;
+
+    width: 115px;
+    border: 0.5px solid var(--secondaryBlue);
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    background-color: inherit;
+    padding: 8px 6px;
+    margin: 1px;
+  }
+  #enrollmentStatus > div {
+    padding-right: 10px;
+  }
+  #courseEnrollTable {
+    text-align: center;
+    border: none;
+    width: 100%;
+  }
+  #courseEnrollTable tr {
+    border-bottom: 1pt solid var(--primaryLightGrayColor);
+    padding: 10px !important;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  #courseEnrollTable th {
+    background-color: var(--secondaryBlue);
+    color: var(--lightColor);
+    font-weight: 700;
+    border-right: 1px solid var(--lightGrayColor);
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 5px 5px 12px;
+  }
+  .firstHead {
+    padding: 15px 10px 15px 20px;
+    text-align: left;
+    margin: 10px;
+  }
+  #courseEnrollTable td {
+    color: var(--primaryBlue);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 10px 10px 10px 10px;
+  }
+  .firstCol {
+    text-align: left;
+    padding: 10px 10px 10px 20px;
+    word-wrap: break-word;
+    width: 243px;
+  }
+}

@@ -1,0 +1,177 @@
+.my-class-tab-list-main-div {
+  width: 100%;
+}
+.ant-tabs-tab .ant-tabs-tab-btn {
+  color: var(--primaryBlue) !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: Source Sans Pro;
+  /* font-family: Show; */
+}
+
+.my-class-tab-list-main-div .ant-tabs-tab-btn:focus {
+  outline: none !important;
+}
+
+.my-class-tab-list-main-div .ant-tabs-tab-btn:focus-visible {
+  outline: 3px solid rgb(71, 61, 79) !important;
+}
+
+.ant-tabs-tab .ant-tabs-tab-btn {
+  color: var(--primaryBlue) !important;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  font-family: Source Sans Pro;
+  /* font-family: Show; */
+}
+/* .ant-tabs .ant-tabs-tab-btn:focus-visible {
+  outline: 4px solid #426392 !important;
+  outline-offset: 2px;
+  border-radius: 4px;
+} */
+.my-class-nav-bar,
+.my-class-nav-bar .ant-tabs,
+.my-class-nav-bar .ant-tabs-nav,
+.my-class-nav-bar .ant-tabs-tab,
+.my-class-nav-bar .ant-tabs-tab-btn {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+.my-class-nav-bar .ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--primaryBlue) !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  font-family: Source Sans Pro;
+}
+.my-class-nav-bar .ant-tabs-ink-bar {
+  background-color: #651c32 !important;
+  height: 4px !important;
+}
+.ant-tabs-nav .ant-tabs-nav-more {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .ant-tabs-nav .ant-tabs-nav-wrap {
+    width: 100%;
+  }
+  .ant-tabs-nav .ant-tabs-nav-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .my-class-tab-list-main-div
+    :where(.css-dev-only-do-not-override-kghr11).ant-tabs
+    .ant-tabs-tab
+    + .ant-tabs-tab {
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .ant-tabs-nav .ant-tabs-nav-wrap {
+    width: 100%;
+  }
+
+  .ant-tabs-nav .ant-tabs-nav-list {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .my-class-tab-list-main-div
+    :where(.css-dev-only-do-not-override-kghr11).ant-tabs
+    .ant-tabs-tab
+    + .ant-tabs-tab {
+    margin: 0px 0px 0px 0px;
+  }
+}
+@media only screen and (max-width: 435px) {
+  .ant-tabs-nav .ant-tabs-nav-wrap {
+    width: 100%;
+  }
+
+  .ant-tabs-nav .ant-tabs-nav-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .my-class-tab-list-main-div
+    :where(.css-dev-only-do-not-override-kghr11).ant-tabs
+    .ant-tabs-tab
+    + .ant-tabs-tab {
+    margin: 0px 0px 0px 0px;
+  }
+
+  .my-class-nav-bar:where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > .ant-tabs-nav
+    .ant-tabs-nav-wrap,
+  :where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > div
+    > .ant-tabs-nav
+    .ant-tabs-nav-wrap {
+    padding: 0 23px !important;
+  }
+
+  .my-class-nav-bar:where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > .ant-tabs-nav,
+  :where(.css-dev-only-do-not-override-1yacf91).ant-tabs > div > .ant-tabs-nav {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  /* .ant-tabs-nav .ant-tabs-nav-wrap {
+      width: 100%;
+    }
+  
+    .ant-tabs-nav .ant-tabs-nav-list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .my-class-tab-list-main-div
+      :where(.css-dev-only-do-not-override-kghr11).ant-tabs
+      .ant-tabs-tab
+      + .ant-tabs-tab {
+      margin: 0px 0px 0px 0px;
+    } */
+
+  .my-class-nav-bar:where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > .ant-tabs-nav
+    .ant-tabs-nav-wrap,
+  :where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > div
+    > .ant-tabs-nav
+    .ant-tabs-nav-wrap {
+    padding: 0 !important;
+  }
+
+  .my-class-nav-bar:where(.css-dev-only-do-not-override-1yacf91).ant-tabs
+    > .ant-tabs-nav,
+  :where(.css-dev-only-do-not-override-1yacf91).ant-tabs > div > .ant-tabs-nav {
+    position: relative;
+    display: flex;
+    flex: none;
+    align-items: center;
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    /* color: var(--primaryBlue) !important; */
+    font-size: 16px !important;
+    /* font-weight: 400 !important; */
+  }
+  .my-class-nav-bar .ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--primaryBlue) !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+  }
+}
