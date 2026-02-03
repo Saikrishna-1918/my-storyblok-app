@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { getStoryblokApi, StoryblokComponent } from "@storyblok/react";
 import style from "../src/myclasses.module.css";
-import "./myclassestablist.css";
+import "./MyClassesTabList.css";
 import { UserAuth } from "./ContextApi/ContextApi";
 import { CloseOutlined, DownOutlined, SearchOutlined } from "@ant-design/icons";
 
