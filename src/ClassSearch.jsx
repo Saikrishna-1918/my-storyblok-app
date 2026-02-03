@@ -788,9 +788,9 @@ const ClassSearch = () => {
             }}>
                 <h2 style={{
                     marginBottom: '30px', backgroundColor: '#651c32', padding: '5px 1vw 5px 0.78125vw', borderRadius: '0.6295907660020986vh 0.3125vw 0 0', cursor: 'pointer',
-                    flex: "0 0 calc(32% - 35px)",   // fixed in flex layout
-                    width: "calc(32% - 30px)",
-                    minWidth: "calc(32% - 30px)",
+                    flex: "0 0 calc(29% - 35px)",   // fixed in flex layout
+                    width: "calc(29% - 30px)",
+                    minWidth: "calc(29% - 30px)",
                     maxWidth: "calc(32% - 35px)",
                     boxSizing: "border-box",
 
